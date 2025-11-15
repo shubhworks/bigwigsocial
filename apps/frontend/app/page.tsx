@@ -1,7 +1,7 @@
+import { HomeLanding } from "@/components/pages/Landing";
+
 export default function HomePage() {
-  return (
-    <div className="text-center bg-red-300 font-extrabold text-3xl">
-      coding from scratch!
-    </div>
-  )
+    return (
+        <HomeLanding/>
+    )
 }
