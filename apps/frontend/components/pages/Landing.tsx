@@ -10,6 +10,7 @@ import { Heart } from "@/icons/Heart";
 import { Trending } from "@/icons/Trending";
 import HeroBtn1 from "../ui/buttons/Hero_01";
 import HeroBtn2 from "../ui/buttons/Hero_02";
+import BrowserLookingCard from "../ui/cards/BrowserLooking";
 
 
 // Animation variants used by framer-motion sections
@@ -185,7 +186,7 @@ export const HomeLanding = () => {
                                         </h2>
                                     </div>
 
-                                    <div className="space-y-4">
+                                    <div className="space-y-4 font-bold text-center">
                                         <p className="text-lg text-gray-700 leading-relaxed">
                                             At <span className="font-semibold text-blue-600">Bigwig Social</span>, we transform businesses by crafting powerful online identities and forging meaningful connections with your target audience.
                                         </p>
@@ -194,8 +195,8 @@ export const HomeLanding = () => {
                                         </p>
                                     </div>
 
-                                    <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                        <HeroBtn2 text="Learn More"/>
+                                    <div className="flex justify-center flex-col sm:flex-row gap-4 pt-4">
+                                        <HeroBtn2 text="Learn More" />
                                     </div>
                                 </motion.div>
 
@@ -267,21 +268,129 @@ export const HomeLanding = () => {
                     {/* --- SERVICES INTRO SECTION --- */}
                     <motion.section
                         id="services"
-                        className="py-24 text-center"
+                        className="py-20 lg:py-28 bg-linear-to-br"
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, amount: 0.3 }}
-                        variants={fadeIn}
+                        viewport={{ once: true, amount: 0.2 }}
+                        variants={staggerContainer}
                     >
-                        <h2 className="text-base font-semibold text-purple-400 uppercase tracking-wider">
-                            Our Digital Marketing Services
-                        </h2>
-                        <p className="font-special font-bold text-4xl md:text-6xl mt-4">
-                            Build Credibility, Drive Growth
-                        </p>
-                        <button className="mt-10 px-8 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-black transition-colors duration-300">
-                            Explore Our Services
-                        </button>
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            {/* Header */}
+                            <motion.div
+                                className="text-center mb-16"
+                                variants={fadeIn}
+                            >
+                                <span className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold uppercase tracking-wider mb-4">
+                                    Our Digital Marketing Services
+                                </span>
+                                <h2 className="font-special font-bold text-3xl md:text-4xl lg:text-5xl text-gray-900 mt-4 max-w-4xl mx-auto leading-tight">
+                                    Build <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-purple-600">Credibility</span>, Drive <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-pink-600">Growth</span>
+                                </h2>
+                                <p className="text-lg text-gray-600 mt-6 max-w-2xl mx-auto">
+                                    Comprehensive digital solutions to elevate your brand and accelerate your business growth
+                                </p>
+                            </motion.div>
+
+                            {/* Desktop Grid - Hidden on mobile */}
+                            <div className="hidden lg:grid lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-16">
+                                <motion.div variants={fadeIn}>
+                                    <BrowserLookingCard text="Social Media Marketing"/>
+                                </motion.div>
+                                <motion.div variants={fadeIn}>
+                                    <BrowserLookingCard
+                                        text="Content Creation & Marketing"
+                                    />
+                                </motion.div>
+                                <motion.div variants={fadeIn}>
+                                    <BrowserLookingCard
+                                        text="Performance Marketing"
+                                    />
+                                </motion.div>
+                                <motion.div variants={fadeIn}>
+                                    <BrowserLookingCard
+                                        text="Website Development"
+                                    />
+                                </motion.div>
+                            </div>
+
+                            {/* Mobile Carousel */}
+                            <div className="lg:hidden relative">
+                                <motion.div
+                                    className="flex space-x-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-8"
+                                    variants={staggerContainer}
+                                >
+                                    <div className="flex space-x-6">
+                                        <div className="w-80 shrink-0 snap-center">
+                                            <BrowserLookingCard
+                                                text="Social Media Marketing"
+                                            />
+                                        </div>
+                                        <div className="w-80 shrink-0 snap-center">
+                                            <BrowserLookingCard
+                                                text="Content Creation & Marketing"
+                                            />
+                                        </div>
+                                        <div className="w-80 shrink-0 snap-center">
+                                            <BrowserLookingCard
+                                                text="Performance Marketing"
+                                            />
+                                        </div>
+                                        <div className="w-80 shrink-0 snap-center">
+                                            <BrowserLookingCard
+                                                text="Website Development"
+                                            />
+                                        </div>
+                                    </div>
+                                </motion.div>
+
+                                {/* Custom Carousel Navigation */}
+                                <div className="flex justify-center items-center space-x-4 mt-8">
+                                    <button
+                                        onClick={() => document.querySelector('.flex.space-x-6').scrollBy({ left: -320, behavior: 'smooth' })}
+                                        className="w-12 h-12 bg-white border-2 border-gray-200 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:border-blue-500 hover:scale-110 transform transition-all duration-300 group"
+                                    >
+                                        <svg className="w-6 h-6 text-gray-600 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                                        </svg>
+                                    </button>
+
+                                    <div className="flex space-x-2">
+                                        {[0, 1, 2, 3].map((dot) => (
+                                            <button
+                                                key={dot}
+                                                onClick={() => {
+                                                    const container = document.querySelector('.flex.space-x-6');
+                                                    // container.scrollTo({ left: dot * 320, behavior: 'smooth' });
+                                                }}
+                                                className="w-3 h-3 bg-gray-300 rounded-full hover:bg-blue-500 transition-colors duration-300"
+                                            />
+                                        ))}
+                                    </div>
+
+                                    <button
+                                        onClick={() => document.querySelector('.flex.space-x-6').scrollBy({ left: 320, behavior: 'smooth' })}
+                                        className="w-12 h-12 bg-white border-2 border-gray-200 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:border-blue-500 hover:scale-110 transform transition-all duration-300 group"
+                                    >
+                                        <svg className="w-6 h-6 text-gray-600 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            {/* CTA Button */}
+                            <motion.div
+                                className="text-center mt-16"
+                                variants={fadeIn}
+                            >
+                                <button className="px-10 py-4 bg-linear-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 inline-flex items-center group">
+                                    Explore Our Services
+                                    <svg className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </motion.div>
+                        </div>
                     </motion.section>
 
                     {/* --- WHY US SECTION --- */}
