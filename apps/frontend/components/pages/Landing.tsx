@@ -1,6 +1,30 @@
 'use client';
 import Navbar from "../Navbar";
 import { motion } from "framer-motion";
+import { ArrowRight, BarChart3, ShieldCheck, Target } from "lucide-react";
+import TypingText from "../TypingText";
+import HeroBtn from "../ui/buttons/Hero_01";
+
+
+// Animation variants used by framer-motion sections
+const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.15,
+        },
+    },
+};
+
+const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.6 },
+    },
+};
 
 export const HomeLanding = () => {
     return (
@@ -22,19 +46,19 @@ export const HomeLanding = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 0.3 }}
                     transition={{ duration: 1 }}
-                    className="absolute animate-pulse bottom-0 right-0 w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-full bg-red-300/80 blur-[80px] md:blur-[150px]"
+                    className="absolute animate-pulse bottom-0 right-0 w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-full bg-cyan-300 blur-[80px] md:blur-[150px]"
                 />
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1.2 }}
                     transition={{ duration: 2, delay: 0.5 }}
-                    className="absolute animate-pulse top-0 left-0 w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full bg-purple-500/40 blur-[60px] md:blur-[120px]"
+                    className="absolute animate-pulse top-0 left-0 w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full bg-red-400/40 blur-[60px] md:blur-[120px]"
                 />
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 2.4 }}
                     transition={{ duration: 2, delay: 1 }}
-                    className="absolute animate-pulse top-1/2 left-1/2 w-[200px] h-[200px] md:w-[400px] md:h-[400px] rounded-full bg-emerald-500/40 blur-[50px] md:blur-[100px] transform -translate-x-1/2 -translate-y-1/2"
+                    className="absolute animate-pulse top-1/2 left-1/2 w-[200px] h-[200px] md:w-[400px] md:h-[400px] rounded-full bg-white/40 blur-[50px] md:blur-[100px] transform -translate-x-1/2 -translate-y-1/2"
                 />
             </div>
 
@@ -43,9 +67,227 @@ export const HomeLanding = () => {
                 <Navbar />
 
                 {/* Main page content */}
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    
-                </div>
+                <main id="main-content" className="container mx-auto px-4 sm:px-6 lg:px-8">
+
+                    {/* --- HERO SECTION --- */}
+
+                    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+                        {/* Background Video */}
+                        <div className="absolute inset-0 w-full h-full">
+                            <video
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                className="w-full h-full object-cover"
+                                poster="/video-poster.jpg" // Add a poster frame for better loading
+                            >
+                                <source src="/bigwigBgVideo.mp4" type="video/mp4" />
+                                {/* <source src="/hero-video.webm" type="video/webm" /> */}
+                                {/* Fallback image if video doesn't load */}
+                                <div className="absolute inset-0 bg-linear-to-r from-purple-900 via-pink-800 to-red-900"></div>
+                            </video>
+
+                            {/* Overlay for better text readability */}
+                            <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
+                        </div>
+
+                        {/* Content */}
+                        <motion.section
+                            className="flex flex-col items-center justify-center text-center relative z-10 px-4 sm:px-6 lg:px-8 py-20"
+                            initial="hidden"
+                            animate="visible"
+                            variants={staggerContainer}
+                        >
+                            <motion.h1
+                                className="font-special font-extrabold text-2xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl leading-tight"
+                                variants={fadeIn}
+                            >
+                                <span className="text-[#F4F4F4] flex md:inline-block justify-center backdrop-blur-md cursor-default bg-black rounded-3xl p-4">
+                                    <TypingText
+                                        text="Turns Your Brand"
+                                        typeSpeed={100}
+                                    />
+                                </span>
+
+                                <div className="bg-cyan-200 animate-pulse p-3 rounded-full text-black">
+                                    INTO A LEGACY
+                                </div>
+                            </motion.h1>
+
+                            <motion.p
+                                className="mt-6 text-lg sm:text-xl md:text-2xl text-gray-200 max-w-3xl leading-relaxed"
+                                variants={fadeIn}
+                            >
+                                <span className="bg-linear-to-r text-2xl md:text-4xl text-center font-extrabold from-white via-amber-400 to-white bg-clip-text text-transparent decoration-cyan-800 cursor-pointer hover:underline">
+                                    <TypingText text="A Digital Marketing Agency that boosts your brand with expert social media management." />
+                                </span>
+                            </motion.p>
+
+                            <motion.div
+                                variants={fadeIn}
+                                className="mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6"
+                            >
+                                <HeroBtn text="Let's Talk" />
+                                {/* <button className="px-8 py-4 bg-linear-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full shadow-lg hover:scale-105 transform transition-all duration-300 hover:shadow-xl hover:from-purple-600 hover:to-pink-600 text-lg">
+                                    Let's Talk
+                                </button> */}
+
+                                <HeroBtn text="View Portfolio" />
+                            </motion.div>
+                        </motion.section>
+
+                        {/* Scroll indicator */}
+                        <motion.div
+                            className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 1.5, duration: 0.8 }}
+                        >
+                            <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+                                <motion.div
+                                    className="w-1 h-3 bg-white rounded-full mt-2"
+                                    animate={{ y: [0, 12, 0] }}
+                                    transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
+                                />
+                            </div>
+                        </motion.div>
+                    </section>
+
+                    {/* --- ABOUT US SECTION --- */}
+                    <motion.section
+                        id="about"
+                        className="py-24"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
+                        variants={staggerContainer}
+                    >
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                            <motion.div variants={fadeIn}>
+                                <h2 className="font-special font-bold text-4xl md:text-5xl mb-6">
+                                    BIGWIG SOCIAL
+                                </h2>
+                                <p className="text-lg text-gray-300 mb-4">
+                                    Bigwig Social helps businesses stand out by building strong online identities and connecting with the right audience.
+                                </p>
+                                <p className="text-lg text-gray-300">
+                                    We deliver tailored strategies and tools to drive engagement, boost traffic, and achieve organic growth.
+                                </p>
+                                <a href="#contact" className="inline-flex items-center text-lg text-purple-400 font-semibold mt-8 group">
+                                    Let's take your brand to the next level!
+                                    <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                                </a>
+                            </motion.div>
+                            <motion.div
+                                className="grid grid-cols-2 gap-4"
+                                variants={staggerContainer}
+                            >
+                                <motion.div variants={fadeIn} className="bg-white/10 p-6 rounded-lg text-center">
+                                    <h3 className="text-4xl font-bold text-purple-400">100+</h3>
+                                    <p className="text-gray-300">Clients Served</p>
+                                </motion.div>
+                                <motion.div variants={fadeIn} className="bg-white/10 p-6 rounded-lg text-center">
+                                    <h3 className="text-4xl font-bold text-pink-400">5+</h3>
+                                    <p className="text-gray-300">Years Experience</p>
+                                </motion.div>
+                                <motion.div variants={fadeIn} className="bg-white/10 p-6 rounded-lg text-center col-span-2">
+                                    <h3 className="text-4xl font-bold text-red-400">98%</h3>
+                                    <p className="text-gray-300">Client Retention</p>
+                                </motion.div>
+                            </motion.div>
+                        </div>
+                    </motion.section>
+
+                    {/* --- SERVICES INTRO SECTION --- */}
+                    <motion.section
+                        id="services"
+                        className="py-24 text-center"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
+                        variants={fadeIn}
+                    >
+                        <h2 className="text-base font-semibold text-purple-400 uppercase tracking-wider">
+                            Our Digital Marketing Services
+                        </h2>
+                        <p className="font-special font-bold text-4xl md:text-6xl mt-4">
+                            Build Credibility, Drive Growth
+                        </p>
+                        <button className="mt-10 px-8 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-black transition-colors duration-300">
+                            Explore Our Services
+                        </button>
+                    </motion.section>
+
+                    {/* --- WHY US SECTION --- */}
+                    <motion.section
+                        className="py-24"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
+                        variants={staggerContainer}
+                    >
+                        <motion.div variants={fadeIn} className="text-center max-w-3xl mx-auto">
+                            <h2 className="text-base font-semibold text-purple-400 uppercase tracking-wider">
+                                Why Bigwig Social?
+                            </h2>
+                            <p className="font-special font-bold text-4xl md:text-5xl mt-4">
+                                What Sets Us Apart?
+                            </p>
+                            <p className="text-lg text-gray-300 mt-6">
+                                Our purpose is not to just deliver what you ask; we provide what your business truly requires. We offer SEO, SMM, PPC, video production, and branding solutions customized for you.
+                            </p>
+                        </motion.div>
+
+                        <motion.div
+                            className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16"
+                            variants={staggerContainer}
+                        >
+                            {/* Card 1 */}
+                            <motion.div
+                                variants={fadeIn}
+                                className="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md"
+                            >
+                                <div className="w-16 h-16 flex items-center justify-center rounded-full bg-linear-to-br from-purple-500 to-pink-500 mb-6">
+                                    <Target className="w-8 h-8 text-white" />
+                                </div>
+                                <h3 className="text-2xl font-bold mb-3">Personalized Strategies</h3>
+                                <p className="text-gray-300">
+                                    We don't do one-size-fits-all. We deliver personalized strategies and data-driven results.
+                                </p>
+                            </motion.div>
+
+                            {/* Card 2 */}
+                            <motion.div
+                                variants={fadeIn}
+                                className="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md"
+                            >
+                                <div className="w-16 h-16 flex items-center justify-center rounded-full bg-linear-to-br from-purple-500 to-pink-500 mb-6">
+                                    <ShieldCheck className="w-8 h-8 text-white" />
+                                </div>
+                                <h3 className="text-2xl font-bold mb-3">Honest & Ethical</h3>
+                                <p className="text-gray-300">
+                                    Our business is built on honest, ethical, and transparent practices. No fluff, just results.
+                                </p>
+                            </motion.div>
+
+                            {/* Card 3 */}
+                            <motion.div
+                                variants={fadeIn}
+                                className="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md"
+                            >
+                                <div className="w-16 h-16 flex items-center justify-center rounded-full bg-linear-to-br from-purple-500 to-pink-500 mb-6">
+                                    <BarChart3 className="w-8 h-8 text-white" />
+                                </div>
+                                <h3 className="text-2xl font-bold mb-3">Solutions for All Sizes</h3>
+                                <p className="text-gray-300">
+                                    We provide effective marketing solutions for businesses of all sizes, from startups to enterprises.
+                                </p>
+                            </motion.div>
+                        </motion.div>
+                    </motion.section>
+
+                </main>
             </div>
         </div>
     )
