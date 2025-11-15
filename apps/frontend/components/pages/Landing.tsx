@@ -3,7 +3,13 @@ import Navbar from "../Navbar";
 import { motion } from "framer-motion";
 import { ArrowRight, BarChart3, ShieldCheck, Target } from "lucide-react";
 import TypingText from "../TypingText";
-import HeroBtn from "../ui/buttons/Hero_01";
+
+import { Users } from "@/icons/Users";
+import { Calendar } from "@/icons/Calendar";
+import { Heart } from "@/icons/Heart";
+import { Trending } from "@/icons/Trending";
+import HeroBtn1 from "../ui/buttons/Hero_01";
+import HeroBtn2 from "../ui/buttons/Hero_02";
 
 
 // Animation variants used by framer-motion sections
@@ -119,7 +125,7 @@ export const HomeLanding = () => {
                                 className="mt-6 text-lg sm:text-xl md:text-2xl text-gray-200 max-w-3xl leading-relaxed"
                                 variants={fadeIn}
                             >
-                                <span className="bg-linear-to-r text-2xl md:text-4xl text-center font-extrabold from-white via-amber-400 to-white bg-clip-text text-transparent decoration-cyan-800 cursor-pointer hover:underline">
+                                <span className="bg-linear-to-r text-2xl md:text-4xl text-center font-extrabold from-white via-cyan-400 to-white bg-clip-text text-transparent decoration-black cursor-pointer hover:underline">
                                     <TypingText text="A Digital Marketing Agency that boosts your brand with expert social media management." />
                                 </span>
                             </motion.p>
@@ -128,12 +134,12 @@ export const HomeLanding = () => {
                                 variants={fadeIn}
                                 className="mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6"
                             >
-                                <HeroBtn text="Let's Talk" />
+                                <HeroBtn1 text="Let's Talk" />
                                 {/* <button className="px-8 py-4 bg-linear-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full shadow-lg hover:scale-105 transform transition-all duration-300 hover:shadow-xl hover:from-purple-600 hover:to-pink-600 text-lg">
                                     Let's Talk
                                 </button> */}
 
-                                <HeroBtn text="View Portfolio" />
+                                <HeroBtn1 text="View Portfolio" />
                             </motion.div>
                         </motion.section>
 
@@ -157,45 +163,104 @@ export const HomeLanding = () => {
                     {/* --- ABOUT US SECTION --- */}
                     <motion.section
                         id="about"
-                        className="py-24"
+                        className="py-20 lg:py-28 bg-linear-to-br "
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, amount: 0.3 }}
+                        viewport={{ once: true, amount: 0.2 }}
                         variants={staggerContainer}
                     >
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                            <motion.div variants={fadeIn}>
-                                <h2 className="font-special font-bold text-4xl md:text-5xl mb-6">
-                                    BIGWIG SOCIAL
-                                </h2>
-                                <p className="text-lg text-gray-300 mb-4">
-                                    Bigwig Social helps businesses stand out by building strong online identities and connecting with the right audience.
-                                </p>
-                                <p className="text-lg text-gray-300">
-                                    We deliver tailored strategies and tools to drive engagement, boost traffic, and achieve organic growth.
-                                </p>
-                                <a href="#contact" className="inline-flex items-center text-lg text-purple-400 font-semibold mt-8 group">
-                                    Let's take your brand to the next level!
-                                    <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-                                </a>
-                            </motion.div>
-                            <motion.div
-                                className="grid grid-cols-2 gap-4"
-                                variants={staggerContainer}
-                            >
-                                <motion.div variants={fadeIn} className="bg-white/10 p-6 rounded-lg text-center">
-                                    <h3 className="text-4xl font-bold text-purple-400">100+</h3>
-                                    <p className="text-gray-300">Clients Served</p>
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                                {/* Left Content */}
+                                <motion.div
+                                    className="space-y-6"
+                                    variants={fadeIn}
+                                >
+                                    <div className="space-y-2">
+                                        <span className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
+                                            About Our Agency
+                                        </span>
+                                        <h2 className="font-special font-bold text-3xl md:text-4xl lg:text-5xl text-gray-900 leading-tight">
+                                            We Build Digital <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-500">Legacies</span>
+                                        </h2>
+                                    </div>
+
+                                    <div className="space-y-4">
+                                        <p className="text-lg text-gray-700 leading-relaxed">
+                                            At <span className="font-semibold text-blue-600">Bigwig Social</span>, we transform businesses by crafting powerful online identities and forging meaningful connections with your target audience.
+                                        </p>
+                                        <p className="text-lg text-gray-700 leading-relaxed">
+                                            Our tailored strategies and cutting-edge tools are designed to drive engagement, boost traffic, and deliver sustainable organic growth that stands the test of time.
+                                        </p>
+                                    </div>
+
+                                    <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                                        <HeroBtn2 text="Learn More"/>
+                                    </div>
                                 </motion.div>
-                                <motion.div variants={fadeIn} className="bg-white/10 p-6 rounded-lg text-center">
-                                    <h3 className="text-4xl font-bold text-pink-400">5+</h3>
-                                    <p className="text-gray-300">Years Experience</p>
+
+                                {/* Right Stats Grid */}
+                                <motion.div
+                                    className="grid grid-cols-2 gap-6"
+                                    variants={staggerContainer}
+                                >
+                                    {/* Stat 1 */}
+                                    <motion.div
+                                        variants={fadeIn}
+                                        className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl border border-gray-100 transform hover:scale-105 transition-all duration-300 group"
+                                    >
+                                        <div className="text-center space-y-3">
+                                            <div className="w-16 h-16 bg-linear-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                                                <Users className="w-8 h-8 text-white" />
+                                            </div>
+                                            <h3 className="text-4xl font-bold text-gray-900">100+</h3>
+                                            <p className="text-gray-600 font-medium">Clients Served</p>
+                                        </div>
+                                    </motion.div>
+
+                                    {/* Stat 2 */}
+                                    <motion.div
+                                        variants={fadeIn}
+                                        className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl border border-gray-100 transform hover:scale-105 transition-all duration-300 group"
+                                    >
+                                        <div className="text-center space-y-3">
+                                            <div className="w-16 h-16 bg-linear-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                                                <Calendar className="w-8 h-8 text-white" />
+                                            </div>
+                                            <h3 className="text-4xl font-bold text-gray-900">5+</h3>
+                                            <p className="text-gray-600 font-medium">Years Experience</p>
+                                        </div>
+                                    </motion.div>
+
+                                    {/* Stat 3 */}
+                                    <motion.div
+                                        variants={fadeIn}
+                                        className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl border border-gray-100 transform hover:scale-105 transition-all duration-300 group col-span-2"
+                                    >
+                                        <div className="text-center space-y-3">
+                                            <div className="w-16 h-16 bg-linear-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                                                <Heart className="w-8 h-8 text-white" />
+                                            </div>
+                                            <h3 className="text-4xl font-bold text-gray-900">98%</h3>
+                                            <p className="text-gray-600 font-medium">Client Retention</p>
+                                        </div>
+                                    </motion.div>
+
+                                    {/* Stat 4 - Additional for better layout */}
+                                    <motion.div
+                                        variants={fadeIn}
+                                        className="bg-linear-to-br from-blue-600 to-purple-600 p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group col-span-2"
+                                    >
+                                        <div className="text-center space-y-3">
+                                            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                                                <Trending className="w-8 h-8 text-white" />
+                                            </div>
+                                            <h3 className="text-4xl font-bold text-white">3x</h3>
+                                            <p className="text-white/90 font-medium">Average Growth</p>
+                                        </div>
+                                    </motion.div>
                                 </motion.div>
-                                <motion.div variants={fadeIn} className="bg-white/10 p-6 rounded-lg text-center col-span-2">
-                                    <h3 className="text-4xl font-bold text-red-400">98%</h3>
-                                    <p className="text-gray-300">Client Retention</p>
-                                </motion.div>
-                            </motion.div>
+                            </div>
                         </div>
                     </motion.section>
 

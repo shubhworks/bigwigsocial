@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const HeroBtn = ({text}: {
+const HeroBtn1 = ({text}: {
   text: string;
 }) => {
   return (
@@ -307,4 +307,4 @@ const StyledWrapper = styled.div`
     animation: action-lines 0.5s ease-out forwards;
   }`;
 
-export default HeroBtn;
+export default HeroBtn1;
