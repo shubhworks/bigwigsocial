@@ -47,7 +47,7 @@ export default function ClientLogos() {
   ]
 
   return (
-    <section className="py-16 bg-white/50 backdrop-blur-sm border-y border-[var(--color-border)]">
+    <section className="py-16 bg-[var(--color-primary)] border-y border-[var(--color-border)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-center text-[var(--color-text-secondary)] text-sm font-semibold uppercase mb-8 tracking-wider">
           Trusted by Leading Brands

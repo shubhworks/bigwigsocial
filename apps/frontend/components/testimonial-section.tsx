@@ -1,10 +1,13 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 export default function TestimonialSection() {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [direction, setDirection] = useState<'left' | 'right'>('right')
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [isDragging, setIsDragging] = useState(false)
+  const [startX, setStartX] = useState(0)
+  const [scrollLeft, setScrollLeft] = useState(0)
+  const carouselRef = useRef<HTMLDivElement>(null)
 
   const testimonials = [
     {
@@ -31,6 +34,22 @@ export default function TestimonialSection() {
       quote: 'Best investment in digital marketing we\'ve made. The ROI speaks for itself.',
       video: '🎬',
     },
+    {
+      id: 4,
+      name: 'Sneha Verma',
+      company: 'Tech Solutions',
+      title: 'Founder',
+      quote: 'Outstanding results! Our brand visibility increased dramatically within weeks.',
+      video: '🎬',
+    },
+    {
+      id: 5,
+      name: 'Rahul Mehta',
+      company: 'E-commerce Plus',
+      title: 'CMO',
+      quote: 'Professional team with innovative strategies. Highly recommend their services!',
+      video: '🎬',
+    },
   ]
 
   const handwrittenReviews = [
@@ -41,68 +60,163 @@ export default function TestimonialSection() {
     'Transformed our online presence. Thank you! 🙏',
   ]
 
+  // Auto-move carousel
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % testimonials.length)
-    }, 5000)
+      if (!isDragging) {
+        setCurrentIndex((prev) => (prev + 1) % testimonials.length)
+      }
+    }, 4000)
     return () => clearInterval(timer)
-  }, [])
+  }, [testimonials.length, isDragging])
+
+  // Update scroll position when currentIndex changes
+  useEffect(() => {
+    if (carouselRef.current && !isDragging) {
+      const container = carouselRef.current
+      const isMobile = window.innerWidth < 768
+      // gap-6 = 24px, for 3 cards there are 2 gaps = 48px total
+      const cardWidth = isMobile 
+        ? container.offsetWidth 
+        : (container.offsetWidth - 48) / 3 + 24 // card width + gap
+      container.scrollTo({
+        left: currentIndex * cardWidth,
+        behavior: 'smooth',
+      })
+    }
+  }, [currentIndex, isDragging])
+
+  // Touch/Mouse drag handlers
+  const handleStart = (e: React.MouseEvent | React.TouchEvent) => {
+    setIsDragging(true)
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX
+    setStartX(clientX - (carouselRef.current?.offsetLeft || 0))
+    setScrollLeft(carouselRef.current?.scrollLeft || 0)
+  }
+
+  const handleMove = (e: React.MouseEvent | React.TouchEvent) => {
+    if (!isDragging || !carouselRef.current) return
+    e.preventDefault()
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX
+    const x = clientX - (carouselRef.current.offsetLeft || 0)
+    const walk = (x - startX) * 2
+    carouselRef.current.scrollLeft = scrollLeft - walk
+  }
+
+  const handleEnd = () => {
+    setIsDragging(false)
+    if (carouselRef.current) {
+      const container = carouselRef.current
+      const isMobile = window.innerWidth < 768
+      // gap-6 = 24px, for 3 cards there are 2 gaps = 48px total
+      const cardWidth = isMobile 
+        ? container.offsetWidth 
+        : (container.offsetWidth - 48) / 3 + 24 // card width + gap
+      const newIndex = Math.round(container.scrollLeft / cardWidth)
+      setCurrentIndex(Math.min(Math.max(0, newIndex), testimonials.length - 1))
+    }
+  }
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index)
+  }
+
+  const goNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length)
+  }
+
+  const goPrev = () => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+  }
 
   return (
-    <section id="testimonials" className="py-20 md:py-32 bg-gradient-to-r from-[var(--color-primary)]/50 to-transparent">
+    <section id="testimonials" className="py-20 md:py-32 bg-[var(--color-primary)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Testimonials Carousel */}
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-text-primary)] mb-12 text-center">
-            Client <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-orange-500">Success Stories</span>
+            Client <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-dark)]">Success Stories</span>
           </h2>
 
-          <div className="relative bg-white/70 backdrop-blur-sm rounded-3xl border border-white/40 overflow-hidden">
-            {/* Video/Media Area */}
-            <div className="grid md:grid-cols-3 gap-0">
-              <div className="md:col-span-2 h-96 md:h-full bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-accent)]/10 flex items-center justify-center overflow-hidden relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-8xl animate-pulse">{testimonials[currentSlide].video}</div>
-                </div>
-              </div>
+          <div className="relative">
+            {/* Carousel Container */}
+            <div
+              ref={carouselRef}
+              className="flex gap-6 overflow-x-hidden scroll-smooth snap-x snap-mandatory"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              onMouseDown={handleStart}
+              onMouseMove={handleMove}
+              onMouseUp={handleEnd}
+              onMouseLeave={handleEnd}
+              onTouchStart={handleStart}
+              onTouchMove={handleMove}
+              onTouchEnd={handleEnd}
+            >
+              {testimonials.map((testimonial, idx) => (
+                <div
+                  key={testimonial.id}
+                  className="flex-shrink-0 w-full md:w-[calc(33.333%-0.75rem)] snap-start"
+                >
+                  <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/40 hover:shadow-2xl transition-all duration-300 h-full">
+                    {/* Video/Media Area */}
+                    <div className="h-48 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-accent)]/10 rounded-xl flex items-center justify-center mb-6">
+                      <div className="text-6xl animate-pulse">{testimonial.video}</div>
+                    </div>
 
-              {/* Testimonial Content */}
-              <div className="p-8 flex flex-col justify-center">
-                <div className="mb-6">
-                  <p className="text-xl md:text-2xl font-semibold text-[var(--color-text-primary)] mb-4 leading-relaxed">
-                    "{testimonials[currentSlide].quote}"
-                  </p>
-                  <div className="flex items-center gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-[var(--color-accent)]">⭐</span>
-                    ))}
+                    {/* Testimonial Content */}
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-1 mb-2">
+                        {[...Array(5)].map((_, i) => (
+                          <span key={i} className="text-[var(--color-accent)] text-lg">⭐</span>
+                        ))}
+                      </div>
+                      <p className="text-base md:text-lg font-semibold text-[var(--color-text-primary)] leading-relaxed">
+                        "{testimonial.quote}"
+                      </p>
+                      <div className="border-t border-white/20 pt-4">
+                        <p className="font-bold text-[var(--color-text-primary)]">
+                          {testimonial.name}
+                        </p>
+                        <p className="text-sm text-[var(--color-text-secondary)]">
+                          {testimonial.title} at {testimonial.company}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
+              ))}
+            </div>
 
-                <div className="border-t border-white/20 pt-4">
-                  <p className="font-bold text-[var(--color-text-primary)]">
-                    {testimonials[currentSlide].name}
-                  </p>
-                  <p className="text-sm text-[var(--color-text-secondary)]">
-                    {testimonials[currentSlide].title} at {testimonials[currentSlide].company}
-                  </p>
-                </div>
+            {/* Navigation Arrows */}
+            <button
+              onClick={goPrev}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 bg-white/80 backdrop-blur-sm rounded-full p-3 shadow-lg hover:bg-white transition-all z-10 hidden md:flex items-center justify-center"
+              aria-label="Previous testimonial"
+            >
+              <span className="text-2xl text-[var(--color-accent)]">←</span>
+            </button>
+            <button
+              onClick={goNext}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 bg-white/80 backdrop-blur-sm rounded-full p-3 shadow-lg hover:bg-white transition-all z-10 hidden md:flex items-center justify-center"
+              aria-label="Next testimonial"
+            >
+              <span className="text-2xl text-[var(--color-accent)]">→</span>
+            </button>
 
-                {/* Navigation Dots */}
-                <div className="flex gap-2 mt-6">
-                  {testimonials.map((_, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => setCurrentSlide(idx)}
-                      className={`w-2 h-2 rounded-full transition-all ${
-                        idx === currentSlide
-                          ? 'bg-[var(--color-accent)] w-8'
-                          : 'bg-[var(--color-accent)]/30'
-                      }`}
-                    />
-                  ))}
-                </div>
-              </div>
+            {/* Navigation Dots */}
+            <div className="flex justify-center gap-2 mt-8">
+              {testimonials.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => goToSlide(idx)}
+                  className={`h-2 rounded-full transition-all ${
+                    idx === currentIndex
+                      ? 'bg-[var(--color-accent)] w-8'
+                      : 'bg-[var(--color-accent)]/30 w-2'
+                  }`}
+                  aria-label={`Go to testimonial ${idx + 1}`}
+                />
+              ))}
             </div>
           </div>
         </div>
@@ -153,6 +267,11 @@ export default function TestimonialSection() {
 
         .font-handwriting {
           font-family: 'handwriting', cursive;
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        div::-webkit-scrollbar {
+          display: none;
         }
       `}</style>
     </section>

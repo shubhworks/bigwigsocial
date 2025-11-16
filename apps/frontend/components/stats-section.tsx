@@ -75,7 +75,7 @@ export default function StatsSection() {
   ]
 
   return (
-    <section ref={sectionRef} className="py-20 md:py-32 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-darker)]">
+    <section ref={sectionRef} className="py-20 md:py-32 bg-[var(--color-primary)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-text-primary)] mb-4">

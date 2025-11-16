@@ -35,11 +35,11 @@ export default function ServicesSection() {
   ]
 
   return (
-    <section id="services" className="py-20 md:py-32 bg-white/50">
+    <section id="services" className="py-20 md:py-32 bg-[var(--color-primary)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-text-primary)] mb-4">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-orange-500">Services</span>
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-dark)]">Services</span>
           </h2>
           <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto">
             Comprehensive digital marketing solutions tailored to your business needs

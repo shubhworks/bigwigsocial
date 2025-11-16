@@ -2,7 +2,7 @@
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 md:py-32 bg-gradient-to-b from-transparent to-[var(--color-primary)]/30">
+    <section id="about" className="py-20 md:py-32 bg-[var(--color-primary)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left - Visual */}
@@ -19,9 +19,9 @@ export default function AboutSection() {
           <div className="space-y-8">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[var(--color-text-primary)]">
-                About <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-orange-500">Bigwig Social</span>
+                About <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-dark)]">Bigwig Social</span>
               </h2>
-              <div className="h-1 w-20 bg-gradient-to-r from-[var(--color-accent)] to-orange-500 rounded-full"></div>
+              <div className="h-1 w-20 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-dark)] rounded-full"></div>
             </div>
 
             <div className="space-y-6">

@@ -15,9 +15,9 @@
   --color-neutral-gray: #6b7280;
 
   /* Accent Colors */
-  --color-accent: #ff9f43;
-  --color-accent-dark: #ff8a1f;
-  --color-accent-light: #ffb366;
+  --color-accent: #2563eb;
+  --color-accent-dark: #1e40af;
+  --color-accent-light: #3b82f6;
 
   /* Semantic Tokens */
   --color-background: #c5e7fb;
@@ -29,7 +29,7 @@
   --color-card-bg-dark: rgba(26, 31, 46, 0.95);
   --color-border: #dbeafe;
   --color-border-dark: #1e293b;
-  --color-button-hover: #ff8a1f;
+  --color-button-hover: #1e40af;
   --color-shadow: rgba(26, 31, 46, 0.12);
   --color-shadow-lg: rgba(26, 31, 46, 0.2);
 
@@ -49,7 +49,7 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #c5e7fb 0%, #e0f2fe 100%);
+  background: #c5e7fb;
   color: var(--color-text-primary);
   font-weight: 400;
 }
@@ -78,10 +78,10 @@ h6 {
 @keyframes glow {
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(255, 159, 67, 0.3);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
   }
   50% {
-    box-shadow: 0 0 30px rgba(255, 159, 67, 0.6);
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.6);
   }
 }
 

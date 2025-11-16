@@ -38,10 +38,10 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-white/50">
+    <section id="contact" className="py-20 md:py-32 bg-[var(--color-primary)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-[var(--color-text-primary)] mb-16">
-          Let's Create Something <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-orange-500">Amazing Together</span>
+          Let's Create Something <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-dark)]">Amazing Together</span>
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -152,7 +152,7 @@ export default function ContactSection() {
           {/* Contact Info & CTA */}
           <div className="space-y-8">
             {/* CTA Card */}
-            <div className="bg-gradient-to-br from-[var(--color-accent)] to-orange-500 rounded-3xl p-8 md:p-12 text-white shadow-2xl">
+            <div className="bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-dark)] rounded-3xl p-8 md:p-12 text-white shadow-2xl">
               <h3 className="text-3xl md:text-4xl font-bold mb-4">
                 Take Your Business to the Next Level
               </h3>

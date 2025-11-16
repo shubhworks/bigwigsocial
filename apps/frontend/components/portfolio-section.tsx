@@ -3,7 +3,7 @@
 import { useState } from 'react'
 
 export default function PortfolioSection() {
-  const [activeFilter, setActiveFilter] = useState('ALL')
+  const [activeFilter, setActiveFilter] = useState('ALL WORKS')
 
   const filters = ['ALL WORKS', 'EDUCATION', 'FMCG', 'REAL ESTATE', 'FINANCE', 'HOSPITALITY']
 
@@ -57,11 +57,11 @@ export default function PortfolioSection() {
     : works.filter(work => work.category === activeFilter)
 
   return (
-    <section id="portfolio" className="py-20 md:py-32 bg-gradient-to-b from-transparent to-[var(--color-primary)]/20">
+    <section id="portfolio" className="py-20 md:py-32 bg-[var(--color-primary)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-text-primary)] mb-4">
-            Success Across <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-orange-500">Industries</span>
+            Success Across <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-dark)]">Industries</span>
           </h2>
         </div>
 
