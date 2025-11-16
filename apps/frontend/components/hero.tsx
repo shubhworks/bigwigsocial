@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import { FloatingCards } from './RightSide3D'
 
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -38,7 +39,7 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-8 items-center min-h-screen justify-center">
           {/* Left Content */}
           <div className="space-y-8 animate-slide-in-up">
@@ -73,18 +74,9 @@ export default function Hero() {
           </div>
 
           {/* Right - Visual */}
-          <div className="hidden md:flex items-center justify-center">
-            <div className="relative w-full h-96">
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-accent)]/20 to-transparent rounded-3xl blur-3xl"></div>
-              <div className="relative animate-float rounded-3xl overflow-hidden border border-white/30 backdrop-blur-sm">
-                <div className="w-full h-full bg-gradient-to-br from-white/30 to-white/10 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-6xl mb-4">🚀</div>
-                    <p className="text-[var(--color-text-primary)] font-semibold">Global Reach,</p>
-                    <p className="text-[var(--color-accent)] font-bold text-lg">Local Touch</p>
-                  </div>
-                </div>
-              </div>
+          <div className="hidden md:flex items-center justify-center w-full overflow-visible">
+            <div className="w-full">
+              <FloatingCards/>
             </div>
           </div>
         </div>
