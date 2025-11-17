@@ -3,39 +3,6 @@
 import FlipCard from "./cards/FlipCard"
 
 export default function ServicesSection() {
-  const services = [
-    {
-      icon: '📱',
-      title: 'Social Media Marketing',
-      description: 'Strategic campaigns that engage your audience and build brand loyalty across all platforms.',
-    },
-    {
-      icon: '📊',
-      title: 'Content Strategy',
-      description: 'Data-driven content that resonates with your target market and drives conversions.',
-    },
-    {
-      icon: '🎨',
-      title: 'Creative Design',
-      description: 'Stunning visuals and designs that make your brand stand out in a crowded market.',
-    },
-    {
-      icon: '🔍',
-      title: 'SEO Optimization',
-      description: 'Boost your online visibility and rank higher on search engines with our proven strategies.',
-    },
-    {
-      icon: '📧',
-      title: 'Email Marketing',
-      description: 'Personalized campaigns that nurture leads and drive repeat business.',
-    },
-    {
-      icon: '🎯',
-      title: 'Performance Analytics',
-      description: 'Real-time insights and detailed reports to measure the success of every campaign.',
-    },
-  ]
-
   return (
     <section id="services" className="py-20 md:py-32 bg-[var(--color-primary)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,13 +16,13 @@ export default function ServicesSection() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          <FlipCard title="Social Media Marketing" description="Strategic campaigns that engage your audience and build brand loyalty across all platforms."/>
-          <FlipCard title="Content Creation" description="Strategic campaigns that engage your audience and build brand loyalty across all platforms."/>
-          <FlipCard title="Performance Marketing" description="Strategic campaigns that engage your audience and build brand loyalty across all platforms."/>
+          <FlipCard title="Social Media Marketing" description="We craft winning Social Media Strategies to manage your profiles, engage your audience, and boost your presence. Focused SMM for measurable results."/>
+          <FlipCard title="Content Creation" description="High-quality, engaging content and video production that captivates your audience. We create the visual and written assets that define your brand."/>
+          <FlipCard title="Performance Marketing" description="Data-driven campaigns focused solely on ROI and Conversion Optimization. We generate quality leads and guarantee measurable business outcomes."/>
         </div>
         <div className="flex justify-center mt-10 pr-40 space-x-45">
-          <FlipCard title="Website Development" description="Strategic campaigns that engage your audience and build brand loyalty across all platforms."/>
-          <FlipCard title="Branding & PPC" description="Strategic campaigns that engage your audience and build brand loyalty across all platforms."/>
+          <FlipCard title="Website Development" description="Custom, SEO-optimized website development. We build fast, secure, and responsive web designs that serve as your 24/7 business platform."/>
+          <FlipCard title="Branding & PPC" description="Establish a powerful Brand Identity and dominate search with expert PPC Management (Google Ads). Define your brand, then amplify it through targeted ads."/>
         </div>
       </div>
     </section>

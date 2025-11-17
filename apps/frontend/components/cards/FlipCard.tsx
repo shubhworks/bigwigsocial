@@ -14,7 +14,7 @@ const Card = ( {logo, title, description}: {
             <h3 className="title"> {title} </h3>
           </div>
           <div className="back">
-            <p className="description">
+            <p className="description flex justify-center font-bold text-2xl mt-10">
                 {description}
             </p>
           </div>
@@ -33,7 +33,7 @@ const StyledWrapper = styled.div`
   .content {
     text-align: center;
     position: relative;
-    transition: all 2.25s;
+    transition: transform 0.6s ease-in-out;
     background-color: rgb(127, 204, 240);
     padding: 12em;
     transform-style: preserve-3d;
