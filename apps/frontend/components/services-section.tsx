@@ -50,11 +50,12 @@ export default function ServicesSection() {
 
         <div className="grid md:grid-cols-3 gap-8">
           <FlipCard title="Social Media Marketing" description="Strategic campaigns that engage your audience and build brand loyalty across all platforms."/>
-          <FlipCard title="Social Media Marketing" description="Strategic campaigns that engage your audience and build brand loyalty across all platforms."/>
-          <FlipCard title="Social Media Marketing" description="Strategic campaigns that engage your audience and build brand loyalty across all platforms."/>
-          <FlipCard title="Social Media Marketing" description="Strategic campaigns that engage your audience and build brand loyalty across all platforms."/>
-          <FlipCard title="Social Media Marketing" description="Strategic campaigns that engage your audience and build brand loyalty across all platforms."/>
-          <FlipCard title="Social Media Marketing" description="Strategic campaigns that engage your audience and build brand loyalty across all platforms."/>
+          <FlipCard title="Content Creation" description="Strategic campaigns that engage your audience and build brand loyalty across all platforms."/>
+          <FlipCard title="Performance Marketing" description="Strategic campaigns that engage your audience and build brand loyalty across all platforms."/>
+        </div>
+        <div className="flex justify-center mt-10 pr-40 space-x-45">
+          <FlipCard title="Website Development" description="Strategic campaigns that engage your audience and build brand loyalty across all platforms."/>
+          <FlipCard title="Branding & PPC" description="Strategic campaigns that engage your audience and build brand loyalty across all platforms."/>
         </div>
       </div>
     </section>

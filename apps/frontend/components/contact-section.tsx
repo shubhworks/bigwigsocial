@@ -22,7 +22,6 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Simulate form submission
     console.log('Form submitted:', formData)
     setSubmitted(true)
     setTimeout(() => {
@@ -54,75 +53,60 @@ export default function ContactSection() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2">
-                        First Name
-                      </label>
                       <input
                         type="text"
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleChange}
                         className="w-full px-4 py-3 bg-white/50 border border-[var(--color-border)] rounded-lg focus:outline-none focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 transition-all"
-                        placeholder="John"
+                        placeholder="First Name"
                         required
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2">
-                        Last Name
-                      </label>
                       <input
                         type="text"
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleChange}
                         className="w-full px-4 py-3 bg-white/50 border border-[var(--color-border)] rounded-lg focus:outline-none focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 transition-all"
-                        placeholder="Doe"
+                        placeholder="Last Name"
                         required
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2">
-                      Email
-                    </label>
                     <input
                       type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-white/50 border border-[var(--color-border)] rounded-lg focus:outline-none focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 transition-all"
-                      placeholder="john@example.com"
+                      placeholder="Email"
                       required
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2">
-                      Phone
-                    </label>
                     <input
                       type="tel"
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-white/50 border border-[var(--color-border)] rounded-lg focus:outline-none focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 transition-all"
-                      placeholder="+91 91312 49316"
+                      placeholder="Contact Number"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2">
-                      Requirements
-                    </label>
                     <textarea
                       name="requirements"
                       value={formData.requirements}
                       onChange={handleChange}
                       rows={4}
                       className="w-full px-4 py-3 bg-white/50 border border-[var(--color-border)] rounded-lg focus:outline-none focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 transition-all resize-none"
-                      placeholder="Tell us about your project..."
+                      placeholder="Requirements, Tell us about your project..."
                     />
                   </div>
 
@@ -147,6 +131,31 @@ export default function ContactSection() {
                 </div>
               )}
             </div>
+
+            <div className="bg-white/70 backdrop-blur-sm mt-4 rounded-2xl p-6 border border-white/40 hover:shadow-lg transition-all">
+              <div className="flex items-start gap-4">
+                <div className="text-3xl">📍</div>
+                <div>
+                  <h4 className="font-bold text-[var(--color-text-primary)] mb-1">Address</h4>
+                  <p className="text-black">
+                    3rd Floor, HP PETROL PUMP, Infront of TATA Croma, MR-4 Rd, above indian bank,  
+                    Vijay Nagar, Jabalpur, Madhya Pradesh 482002
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border mt-4 border-white/40 hover:shadow-lg transition-all">
+              <div className="flex items-start gap-4">
+                <div className="text-3xl">📞</div>
+                <div>
+                  <h4 className="font-bold text-[var(--color-text-primary)]">Contact Us</h4>
+                  <p className="text-black">
+                    +91 91312 49316 , +91 9174451227
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Contact Info & CTA */}
@@ -166,45 +175,18 @@ export default function ContactSection() {
               </div>
             </div>
 
-            {/* Contact Details */}
-            <div className="space-y-6">
-              <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/40 hover:shadow-lg transition-all">
-                <div className="flex items-start gap-4">
-                  <div className="text-3xl">📍</div>
-                  <div>
-                    <h4 className="font-bold text-[var(--color-text-primary)] mb-1">Address</h4>
-                    <p className="text-[var(--color-text-secondary)]">
-                      Jabalpur, Madhya Pradesh<br />
-                      India
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/40 hover:shadow-lg transition-all">
-                <div className="flex items-start gap-4">
-                  <div className="text-3xl">📞</div>
-                  <div>
-                    <h4 className="font-bold text-[var(--color-text-primary)] mb-1">Phone</h4>
-                    <p className="text-[var(--color-text-secondary)]">
-                      +91 91312 49316
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/40 hover:shadow-lg transition-all">
-                <div className="flex items-start gap-4">
-                  <div className="text-3xl">✉️</div>
-                  <div>
-                    <h4 className="font-bold text-[var(--color-text-primary)] mb-1">Email</h4>
-                    <p className="text-[var(--color-text-secondary)]">
-                      bigwigsocial@gmail.com
-                    </p>
-                  </div>
-                </div>
-              </div>
+            {/* MAP SECTION */}
+            <div className="w-full h-64 md:h-80 rounded-3xl overflow-hidden shadow-xl border border-white/30 bg-white/70 backdrop-blur-sm">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3699.814334266954!2d79.92231037439406!3d23.167207513683935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981b1e9ee3dd7e5%3A0x9c12c1f8fd9e2b33!2sHP%20Petrol%20Pump%2C%20MR-4%20Rd%2C%20Vijay%20Nagar%2C%20Jabalpur%2C%20Madhya%20Pradesh%20482002!5e0!3m2!1sen!2sin!4v1703245234567"
+                width="100%"
+                height="100%"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
+
           </div>
         </div>
       </div>

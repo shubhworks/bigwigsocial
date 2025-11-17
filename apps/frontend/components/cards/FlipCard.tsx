@@ -56,6 +56,7 @@ const StyledWrapper = styled.div`
   }
 
   .title {
+    margin-top: 100px;
     transform: translateZ(5rem);
     font-size: 2rem;
   }
