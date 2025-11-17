@@ -13,6 +13,7 @@ import {
   fadeIn,
   headerReveal,
 } from '@/styles/Animations';
+import Image from 'next/image';
 
 const ReviewCard = ({
   img,
@@ -22,26 +23,33 @@ const ReviewCard = ({
 }: {
   img: string;
   title: string;
-  description: string;
-  buttonText: string;
+  description?: string;
+  buttonText?: string;
 }) => {
   return (
     <figure className="relative h-auto min-h-[240px] w-full cursor-pointer overflow-hidden rounded-xl border p-6 md:p-7 border-white/40 bg-white/80 flex flex-col items-center text-center shadow-lg" style={{ transform: 'translateZ(0)', backfaceVisibility: 'hidden', flexShrink: 0, minWidth: '100%' }}>
       {/* SVG Icon */}
-      <img className="w-14 h-14 md:w-16 md:h-16 mb-3 object-contain" alt={title} src={img} loading="lazy" />
+      {/* <img className="w-14 h-14 md:w-16 md:h-16 mb-3 object-contain" alt={title} src={img} loading="lazy" /> */}
 
+      <Image
+        src={img}
+        width={500}
+        height={500}
+        alt='logo'
+      />
+    
       {/* Title */}
-      <figcaption className="text-lg md:text-xl font-semibold text-[var(--color-text-primary)] mb-2">
+      {/* <figcaption className="text-lg md:text-xl font-semibold text-[var(--color-text-primary)] mb-2">
         {title}
-      </figcaption>
+      </figcaption> */}
 
       {/* Description */}
-      <p className="text-sm md:text-base font-medium text-[var(--color-text-secondary)] mt-1 leading-relaxed px-2">{description}</p>
+      {/* <p className="text-sm md:text-base font-medium text-[var(--color-text-secondary)] mt-1 leading-relaxed px-2">{description}</p> */}
 
       {/* Button */}
-      <button className="mt-5 px-4 py-2 border rounded-lg border-[var(--color-accent)]/50 bg-[var(--color-accent)]/10 hover:bg-[var(--color-accent)]/20 text-sm md:text-base font-medium text-[var(--color-accent)] transition-colors">
+      {/* <button className="mt-5 px-4 py-2 border rounded-lg border-[var(--color-accent)]/50 bg-[var(--color-accent)]/10 hover:bg-[var(--color-accent)]/20 text-sm md:text-base font-medium text-[var(--color-accent)] transition-colors">
         {buttonText}
-      </button>
+      </button> */}
     </figure>
   );
 };
