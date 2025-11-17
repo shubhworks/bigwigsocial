@@ -1,6 +1,6 @@
 export const tryMoreActivities = [
     {
-      title: 'Abacus',
+      title: 'MOKSH BHAIYA',
       description: 'A tool for simple arithmetic calculations',
       buttonText: 'Get Abacus',
       img: 'assets/Activities/Abacus.svg',

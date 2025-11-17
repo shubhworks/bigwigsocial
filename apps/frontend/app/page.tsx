@@ -25,9 +25,9 @@ export default function Home() {
     <main className="w-full overflow-x-hidden">
       <Navbar />
       <Hero />
-      <ClientLogos />
-      <AboutSection />
       <StatsSection />
+      <AboutSection />
+      <ClientLogos />
       <ServicesSection />
       <PortfolioSection />
       <TestimonialSection />

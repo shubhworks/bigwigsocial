@@ -27,19 +27,18 @@ export default function Navbar() {
   ]
 
   return (
-    <div className='flex justify-center items-center'> 
+    <div className='flex justify-center items-center'>
       <nav
-        className={`fixed top-3 w-[80%] z-50 transition-all duration-300 ${
-          isScrolled
+        className={`fixed top-3 w-[80%] z-50 transition-all duration-300 ${isScrolled
             ? 'bg-white/30 backdrop-blur-md shadow-lg rounded-full'
-            : 'bg-linear-to-b from-(--color-primary) to-transparent'
-        }`}
+            : 'bg-linear-to-b from-(--color-primary) to-transparent rounded-full'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link href="#home" className="flex items-center gap-2 group">
-              <Image 
+              <Image
                 src={`/bigwigsocialLogo.png`}
                 alt="Bigwig Social Logo"
                 width={200}
@@ -63,7 +62,7 @@ export default function Navbar() {
 
             {/* Desktop CTA */}
             <div className="md:block hidden mt-4">
-              <NavPortfolioBtn text='Portfolio'/>
+              <NavPortfolioBtn text='Portfolio' />
             </div>
 
             {/* Mobile Menu Button */}
