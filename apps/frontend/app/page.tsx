@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Navbar from '@/components/navbar'
 import Hero from '@/components/hero'
 import ClientLogos from '@/components/client-logos'
 import AboutSection from '@/components/about-section'
@@ -11,6 +10,7 @@ import PortfolioSection from '@/components/portfolio-section'
 import TestimonialSection from '@/components/testimonial-section'
 import ContactSection from '@/components/contact-section'
 import Footer from '@/components/footer'
+import Navbar from '@/components/Navbar'
 
 export default function Home() {
   const [mounted, setMounted] = useState(false)
