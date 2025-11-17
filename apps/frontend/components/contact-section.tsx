@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import axios from 'axios' // Import axios
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -11,6 +12,8 @@ export default function ContactSection() {
     requirements: '',
   })
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -20,20 +23,44 @@ export default function ContactSection() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    setSubmitted(true)
-    setTimeout(() => {
-      setSubmitted(false)
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        requirements: '',
-      })
-    }, 3000)
+    setIsSubmitting(true)
+    setError(null)
+
+    const apiUrl = process.env.NEXT_PUBLIC_BACKEND_URL
+
+    if (!apiUrl) {
+      console.error('API URL is not defined. Please set NEXT_PUBLIC_API_URL in your .env.local file.');
+      setError('There was a configuration error. Please try again later.');
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      // Send the form data to the backend
+      const response = await axios.post(apiUrl, formData)
+
+      if (response.status === 200) {
+        setSubmitted(true)
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setSubmitted(false)
+          setFormData({
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            requirements: '',
+          })
+        }, 3000)
+      }
+    } catch (err) {
+      console.error('Form submission error:', err)
+      setError('There was an error sending your message. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -112,10 +139,16 @@ export default function ContactSection() {
 
                   <button
                     type="submit"
-                    className="w-full px-6 py-3 bg-[var(--color-accent)] text-white rounded-lg font-bold hover:bg-[var(--color-accent-dark)] transition-all hover:shadow-lg active:scale-95"
+                    disabled={isSubmitting} // Disable button while submitting
+                    className="w-full px-6 py-3 bg-[var(--color-accent)] text-white rounded-lg font-bold hover:bg-[var(--color-accent-dark)] transition-all hover:shadow-lg active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
+
+                  {/* Show error message if submission fails */}
+                  {error && (
+                    <p className="text-center text-red-600">{error}</p>
+                  )}
                 </form>
               ) : (
                 <div className="flex flex-col items-center justify-center py-12 text-center animate-fade-in-scale">
@@ -138,7 +171,7 @@ export default function ContactSection() {
                 <div>
                   <h4 className="font-bold text-[var(--color-text-primary)] mb-1">Address</h4>
                   <p className="text-black">
-                    3rd Floor, HP PETROL PUMP, Infront of TATA Croma, MR-4 Rd, above indian bank,  
+                    3rd Floor, HP PETROL PUMP, Infront of TATA Croma, MR-4 Rd, above indian bank,
                     Vijay Nagar, Jabalpur, Madhya Pradesh 482002
                   </p>
                 </div>
