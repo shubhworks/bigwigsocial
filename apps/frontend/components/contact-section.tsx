@@ -176,7 +176,7 @@ export default function ContactSection() {
             </div>
 
             {/* MAP SECTION */}
-            <div className="w-full h-64 md:h-80 rounded-3xl overflow-hidden shadow-xl border border-white/30 bg-white/70 backdrop-blur-sm">
+            <div className="w-full h-64 md:h-96 rounded-3xl overflow-hidden shadow-xl border border-white/30 bg-white/70 backdrop-blur-sm">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3699.814334266954!2d79.92231037439406!3d23.167207513683935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981b1e9ee3dd7e5%3A0x9c12c1f8fd9e2b33!2sHP%20Petrol%20Pump%2C%20MR-4%20Rd%2C%20Vijay%20Nagar%2C%20Jabalpur%2C%20Madhya%20Pradesh%20482002!5e0!3m2!1sen!2sin!4v1703245234567"
                 width="100%"
