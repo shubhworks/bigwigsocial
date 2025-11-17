@@ -29,19 +29,17 @@ export default function OurStoryHero() {
       ctx.fillStyle = gradient
       ctx.fillRect(0, 0, width, height)
 
-      // Animated floating circles
-      for (let i = 0; i < 5; i++) {
-        const x = width * (0.2 + i * 0.15)
-        const y = height * 0.3 + Math.sin(time * 0.02 + i) * 40
-        const radius = 30 + Math.sin(time * 0.01 + i) * 10
+          // Animated floating circles (blue/cyan instead of orange)
+          for (let i = 0; i < 5; i++) {
+            const x = width * (0.2 + i * 0.15)
+            const y = height * 0.3 + Math.sin(time * 0.02 + i) * 40
+            const radius = 30 + Math.sin(time * 0.01 + i) * 10
 
-        ctx.fillStyle = `rgba(255, 159, 67, ${0.1 + Math.sin(time * 0.02 + i) * 0.1})`
-        ctx.beginPath()
-        ctx.arc(x, y, radius, 0, Math.PI * 2)
-        ctx.fill()
-      }
-
-      time++
+            ctx.fillStyle = `rgba(59, 130, 246, ${0.1 + Math.sin(time * 0.02 + i) * 0.1})`
+            ctx.beginPath()
+            ctx.arc(x, y, radius, 0, Math.PI * 2)
+            ctx.fill()
+          }      time++
       animationId = requestAnimationFrame(draw)
     }
 
@@ -73,7 +71,7 @@ export default function OurStoryHero() {
         <div className="text-center space-y-8 animate-slide-in-up">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-[var(--color-text-primary)]">
             Our Story:
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-orange-500">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-blue-400">
               The Journey of Bigwig Social
             </span>
           </h1>

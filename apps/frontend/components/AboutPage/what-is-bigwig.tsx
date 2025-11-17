@@ -19,14 +19,14 @@ export default function WhatIsBigwig() {
   ]
 
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-b from-transparent to-white/40">
+    <section className="py-20 md:py-32 bg-gradient-to-b from-cyan-50 via-transparent to-blue-50/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-slide-in-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[var(--color-text-primary)]">
-            What is <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-orange-500">Bigwig Social?</span>
+            What is <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-blue-400">Bigwig Social?</span>
           </h2>
-          <div className="h-1 w-20 bg-gradient-to-r from-[var(--color-accent)] to-orange-500 rounded-full mx-auto mb-8"></div>
+          <div className="h-1 w-20 bg-gradient-to-r from-[var(--color-accent)] to-blue-400 rounded-full mx-auto mb-8"></div>
 
           <div className="max-w-3xl mx-auto space-y-6">
             <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed">
@@ -47,7 +47,7 @@ export default function WhatIsBigwig() {
               className="group bg-white/70 backdrop-blur-sm border border-white/40 rounded-2xl p-8 hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in-scale"
               style={{ animationDelay: `${idx * 100}ms` }}
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-[var(--color-accent)] to-orange-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 bg-gradient-to-br from-[var(--color-accent)] to-blue-400 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <span className="text-2xl">✨</span>
               </div>
               <h3 className="text-xl font-bold text-[var(--color-text-primary)] mb-3">{value.title}</h3>

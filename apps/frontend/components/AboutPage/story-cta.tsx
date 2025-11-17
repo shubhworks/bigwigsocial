@@ -4,12 +4,12 @@ import Link from 'next/link'
 
 export default function StoryCTA() {
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-r from-[var(--color-accent)]/20 via-transparent to-orange-500/20">
+    <section className="py-20 md:py-32 bg-gradient-to-r from-[var(--color-accent)]/20 via-transparent to-blue-400/20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8 animate-slide-in-up">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--color-text-primary)]">
             Ready to Start Your
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-orange-500">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-blue-400">
               Success Story?
             </span>
           </h2>

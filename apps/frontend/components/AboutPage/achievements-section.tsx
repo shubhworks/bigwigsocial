@@ -51,11 +51,11 @@ export default function AchievementsSection() {
         <div className="text-center mb-16 animate-slide-in-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[var(--color-text-primary)]">
             Our Achievements
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-orange-500">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-blue-400">
               and Milestones
             </span>
           </h2>
-          <div className="h-1 w-20 bg-gradient-to-r from-[var(--color-accent)] to-orange-500 rounded-full mx-auto"></div>
+          <div className="h-1 w-20 bg-gradient-to-r from-[var(--color-accent)] to-blue-400 rounded-full mx-auto"></div>
         </div>
 
         {/* Category Tabs */}
@@ -84,7 +84,7 @@ export default function AchievementsSection() {
               style={{ animationDelay: `${idx * 150}ms` }}
             >
               {/* Icon */}
-              <div className="w-16 h-16 bg-gradient-to-br from-[var(--color-accent)] to-orange-500 rounded-xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform">
+              <div className="w-16 h-16 bg-gradient-to-br from-[var(--color-accent)] to-blue-400 rounded-xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform">
                 <span className="text-3xl">{selectedCategory === 'awards' ? '🏆' : '✅'}</span>
               </div>
 

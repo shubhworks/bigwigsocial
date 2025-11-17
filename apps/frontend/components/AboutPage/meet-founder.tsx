@@ -22,11 +22,11 @@ export default function MeetFounder() {
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[var(--color-text-primary)]">
                 Meet the Visionary:
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-orange-500">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-blue-400">
                   The Founder
                 </span>
               </h2>
-              <div className="h-1 w-20 bg-gradient-to-r from-[var(--color-accent)] to-orange-500 rounded-full"></div>
+              <div className="h-1 w-20 bg-gradient-to-r from-[var(--color-accent)] to-blue-400 rounded-full"></div>
             </div>
 
             <div className="space-y-6">
@@ -39,7 +39,7 @@ export default function MeetFounder() {
               </p>
 
               {/* Founder Quote */}
-              <div className="bg-gradient-to-br from-[var(--color-accent)]/10 to-orange-500/5 border-l-4 border-[var(--color-accent)] p-8 rounded-lg my-8">
+              <div className="bg-gradient-to-br from-[var(--color-accent)]/10 to-blue-400/5 border-l-4 border-[var(--color-accent)] p-8 rounded-lg my-8">
                 <p className="text-xl md:text-2xl font-bold text-[var(--color-accent)] mb-3">
                   "The future of digital marketing isn't about louder messages—it's about smarter strategies and authentic connections."
                 </p>

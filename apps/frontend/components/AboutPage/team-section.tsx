@@ -39,17 +39,17 @@ export default function TeamSection() {
   ]
 
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-b from-white/20 to-transparent">
+    <section className="py-20 md:py-32 bg-gradient-to-b from-cyan-50/50 to-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-slide-in-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[var(--color-text-primary)]">
             Meet the Engine:
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-orange-500">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-blue-400">
               Our Dynamic Team
             </span>
           </h2>
-          <div className="h-1 w-20 bg-gradient-to-r from-[var(--color-accent)] to-orange-500 rounded-full mx-auto mb-8"></div>
+          <div className="h-1 w-20 bg-gradient-to-r from-[var(--color-accent)] to-blue-400 rounded-full mx-auto mb-8"></div>
 
           <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed max-w-3xl mx-auto">
             Our team is a collective of hard-working, creative, and professional minds united by a single passion: delivering exceptional results. Behind every successful campaign is a dedicated individual whose unique skills and relentless drive make it all possible.
@@ -65,7 +65,7 @@ export default function TeamSection() {
               style={{ animationDelay: `${idx * 100}ms` }}
             >
               {/* Avatar */}
-              <div className="w-24 h-24 bg-gradient-to-br from-[var(--color-accent)] to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl group-hover:scale-110 transition-transform">
+              <div className="w-24 h-24 bg-gradient-to-br from-[var(--color-accent)] to-blue-400 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl group-hover:scale-110 transition-transform">
                 {member.emoji}
               </div>
 
