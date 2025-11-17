@@ -1,11 +1,13 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { Star } from '@/icons/Star'
+import { ReactElement, useEffect, useRef, useState } from 'react'
 
 interface Stat {
   label: string
   value: number
   suffix: string
+  icon: ReactElement
 }
 
 interface AnimatedCounterProps {
@@ -68,10 +70,10 @@ export default function StatsSection() {
   }, [])
 
   const stats: Stat[] = [
-    { label: 'Happy Clients', value: 50, suffix: '+' },
-    { label: 'Projects Completed', value: 200, suffix: '+' },
-    { label: 'Countries Reached', value: 15, suffix: '+' },
-    { label: 'Team Members', value: 25, suffix: '' },
+    { label: 'Happy Clients', value: 50, suffix: '+', icon: <Star className='size-8 text-amber-400'/> },
+    { label: 'Projects Completed', value: 200, suffix: '+', icon: <Star className='size-8 text-amber-400'/> },
+    { label: 'Countries Reached', value: 15, suffix: '+', icon: <Star className='size-8 text-amber-400'/> },
+    { label: 'Team Members', value: 25, suffix: '', icon: <Star className='size-8 text-amber-400'/> },
   ]
 
   return (
@@ -94,7 +96,7 @@ export default function StatsSection() {
             >
               <div className="mb-4 flex justify-center">
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[var(--color-accent)]/20 to-transparent flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-[var(--color-accent)]/40 group-hover:to-transparent transition-all">
-                  <span className="text-2xl">📊</span>
+                  <span className="text-2xl"> {stat.icon} </span>
                 </div>
               </div>
               <AnimatedCounter target={stat.value} suffix={stat.suffix} isVisible={isVisible} />

@@ -4,7 +4,9 @@ const NavPortfolioBtn = ({text}: {
     text: string;
 }) => {
     return (
-        <div className="relative">
+        <div onClick={() => {
+          window.location.href = "/#portfolio"
+        }} className="relative">
             <button className="btn relative appearance-none bg-transparent border-none text-[#0f1923] cursor-pointer p-2 mb-5 uppercase font-bold text-[14px] transition-all duration-150 ease-linear">
 
                 {/* Inner container */}

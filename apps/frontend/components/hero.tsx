@@ -56,7 +56,9 @@ export default function Hero() {
               </p>
             </div>
 
-            <button className="group px-8 py-4 bg-[var(--color-accent)] text-white rounded-full font-bold text-lg hover:bg-[var(--color-accent-dark)] transition-all hover:shadow-xl hover:scale-105 inline-flex items-center gap-2">
+            <button onClick={() => {
+              window.location.href = "/#testimonials"
+            }} className="group px-8 py-4 bg-[var(--color-accent)] text-white rounded-full font-bold text-lg hover:bg-[var(--color-accent-dark)] transition-all hover:shadow-xl hover:scale-105 inline-flex items-center gap-2">
               Let's Talk Results
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </button>

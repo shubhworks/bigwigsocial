@@ -27,7 +27,6 @@ export default function Home() {
       <Hero />
       <StatsSection />
       <AboutSection />
-      <ClientLogos />
       <ServicesSection />
       <PortfolioSection />
       <TestimonialSection />

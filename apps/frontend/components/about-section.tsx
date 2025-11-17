@@ -1,5 +1,8 @@
 'use client'
 
+import Image from "next/image"
+import Link from "next/link"
+
 export default function AboutSection() {
   return (
     <section id="about" className="py-20 md:py-32 bg-[var(--color-primary)]">
@@ -9,9 +12,12 @@ export default function AboutSection() {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-accent)]/30 to-transparent rounded-3xl blur-2xl"></div>
             <div className="relative bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/40 shadow-2xl">
-              <div className="aspect-square bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-accent)]/20 rounded-2xl flex items-center justify-center text-7xl">
-                🎯
-              </div>
+              <Image 
+                src={`/workingtogether.jpg`}
+                alt="about image"
+                width={600}
+                height={600}
+              />
             </div>
           </div>
 
@@ -43,17 +49,11 @@ export default function AboutSection() {
               </p>
             </div>
 
-            <div className="flex gap-4 flex-wrap">
-              <div className="px-4 py-2 bg-[var(--color-accent)]/10 rounded-full border border-[var(--color-accent)]/30">
-                <span className="text-sm font-semibold text-[var(--color-accent)]">📈 Results-Driven</span>
+            <Link href={'/about'}>
+              <div className="flex gap-4 flex-wrap">
+                READ MORE
               </div>
-              <div className="px-4 py-2 bg-[var(--color-accent)]/10 rounded-full border border-[var(--color-accent)]/30">
-                <span className="text-sm font-semibold text-[var(--color-accent)]">🌍 Global Vision</span>
-              </div>
-              <div className="px-4 py-2 bg-[var(--color-accent)]/10 rounded-full border border-[var(--color-accent)]/30">
-                <span className="text-sm font-semibold text-[var(--color-accent)]">💡 Innovative</span>
-              </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

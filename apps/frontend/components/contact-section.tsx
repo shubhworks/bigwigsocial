@@ -108,7 +108,7 @@ export default function ContactSection() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-white/50 border border-[var(--color-border)] rounded-lg focus:outline-none focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 transition-all"
-                      placeholder="+91 XXXXX XXXXX"
+                      placeholder="+91 91312 49316"
                     />
                   </div>
 
@@ -187,7 +187,7 @@ export default function ContactSection() {
                   <div>
                     <h4 className="font-bold text-[var(--color-text-primary)] mb-1">Phone</h4>
                     <p className="text-[var(--color-text-secondary)]">
-                      +91 XXXXX XXXXX
+                      +91 91312 49316
                     </p>
                   </div>
                 </div>
@@ -199,7 +199,7 @@ export default function ContactSection() {
                   <div>
                     <h4 className="font-bold text-[var(--color-text-primary)] mb-1">Email</h4>
                     <p className="text-[var(--color-text-secondary)]">
-                      hello@bigwigsocial.com
+                      bigwigsocial@gmail.com
                     </p>
                   </div>
                 </div>
