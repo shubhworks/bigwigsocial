@@ -1,5 +1,7 @@
 'use client'
 
+import Image from "next/image"
+
 export default function MeetFounder() {
   return (
     <section className="py-20 md:py-32 bg-gradient-to-b from-white/20 to-transparent">
@@ -9,10 +11,14 @@ export default function MeetFounder() {
           <div className="flex justify-center md:order-1">
             <div className="relative w-full max-w-sm">
               <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-accent)]/30 to-transparent rounded-3xl blur-2xl"></div>
-              <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-2 border border-white/40 overflow-hidden shadow-2xl">
-                <div className="aspect-square bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-accent)]/20 rounded-2xl flex items-center justify-center text-8xl">
-                  👩‍💼
-                </div>
+              <div className="relative hover:scale-105 cursor-pointer transition-all duration-300 backdrop-blur-sm rounded-3xl p-2 border bg-transparent border-white/40 overflow-hidden shadow-2xl">
+                <Image
+                  src={"/founder.jpg"}
+                  width={600}
+                  height={600}
+                  alt="Founder Image"
+                  className="rounded-2xl"
+                />
               </div>
             </div>
           </div>
@@ -43,7 +49,8 @@ export default function MeetFounder() {
                 <p className="text-xl md:text-2xl font-bold text-[var(--color-accent)] mb-3">
                   "The future of digital marketing isn't about louder messages—it's about smarter strategies and authentic connections."
                 </p>
-                <p className="text-[var(--color-text-secondary)] font-semibold">— Founder, Bigwig Social</p>
+                <p className="text-[var(--color-text-secondary)] font-semibold">Rachita Jain</p>
+                <p className="text-[var(--color-text-secondary)] font-semibold">~ Founder, Bigwig Social</p>
               </div>
 
               <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed">
