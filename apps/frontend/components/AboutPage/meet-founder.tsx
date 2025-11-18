@@ -36,12 +36,12 @@ export default function MeetFounder() {
             </div>
 
             <div className="space-y-6">
-              <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed">
+              <p className="text-lg text-black leading-relaxed">
                 With over a decade of experience in digital marketing and brand building, our founder envisioned a different kind of agency. One that wouldn't settle for "good enough," but instead would challenge every assumption, push every boundary, and deliver extraordinary results.
               </p>
 
-              <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed">
-                Her background spans strategy, creative direction, and performance marketing. She believed that the best ideas come from combining data-driven thinking with unbridled creativity—and she built Bigwig Social on exactly that foundation.
+              <p className="text-lg text-black leading-relaxed">
+                Her background spans strategy, creative direction, and performance marketing. She believed that the best ideas come from combining data-driven thinking with unbridled creativity and she built Bigwig Social on exactly that foundation.
               </p>
 
               {/* Founder Quote */}

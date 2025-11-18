@@ -11,7 +11,7 @@ export default function AboutSection() {
           {/* Left - Visual */}
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-accent)]/30 to-transparent rounded-3xl blur-2xl"></div>
-            <div className="relative bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/40 shadow-2xl">
+            <div className="relative bg-white backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/40 shadow-2xl">
               <Image
                 src={`/workingtogether.jpg`}
                 alt="about image"

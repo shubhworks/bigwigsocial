@@ -87,7 +87,7 @@ export default function StatsSection() {
             Client Success: Our Measurable Impact
           </h2>
           <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto">
-            Building success stories across industries, one project at a time
+            Building success stories across industries.
           </p>
         </div>
 

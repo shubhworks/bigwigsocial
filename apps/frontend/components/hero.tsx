@@ -47,11 +47,10 @@ export default function Hero() {
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-[var(--color-text-primary)]">
                 Jabalpur’s Top-Rated
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-dark)]">
-                  Digital Marketing
+                  Digital Marketing Agency
                 </span>
                 for Global
                 Results. 
-                <div className='text-2xl md:text-4xl pt-2'> (Combines local keyword with global ambition.) </div>
               </h1>
               <p className="text-xl md:text-2xl pt-5 text-[var(--color-text-secondary)] font-medium leading-relaxed max-w-2xl">
                 We are a full-service, results-driven team 
@@ -60,7 +59,7 @@ export default function Hero() {
             </div>
 
             <button onClick={() => {
-              window.location.href = "/#testimonials"
+              window.location.href = "/#contact"
             }} className="group cursor-pointer px-8 py-4 bg-[var(--color-accent)] text-white rounded-full font-bold text-lg hover:bg-[var(--color-accent-dark)] transition-all hover:shadow-xl hover:scale-105 inline-flex items-center gap-2">
               Start Your Success Story
               <span className="group-hover:translate-x-1 transition-transform">→</span>

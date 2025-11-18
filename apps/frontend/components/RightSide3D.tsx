@@ -27,7 +27,7 @@ const ReviewCard = ({
   buttonText?: string;
 }) => {
   return (
-    <figure className="relative h-auto min-h-[240px] w-full cursor-pointer overflow-hidden rounded-xl border p-6 md:p-7 border-white/40 bg-white/80 flex flex-col items-center text-center shadow-lg" style={{ transform: 'translateZ(0)', backfaceVisibility: 'hidden', flexShrink: 0, minWidth: '100%' }}>
+    <figure className="relative h-auto min-h-[240px] w-full cursor-pointer overflow-hidden rounded-xl border p-6 md:p-7 border-white/40 bg-white flex flex-col items-center text-center shadow-lg" style={{ transform: 'translateZ(0)', backfaceVisibility: 'hidden', flexShrink: 0, minWidth: '100%' }}>
       {/* SVG Icon */}
       {/* <img className="w-14 h-14 md:w-16 md:h-16 mb-3 object-contain" alt={title} src={img} loading="lazy" /> */}
 
