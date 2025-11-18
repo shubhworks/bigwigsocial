@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="font-extrabold mb-4 text-white">Services</div>
+            <div className="font-extrabold mb-4 text-white">The Path to Digital Excellence</div>
             <ul className="space-y-2 text-lg text-gray-300">
               <li><a href="" className="hover:text-accent transition-colors">Social Media Marketing</a></li>
               <li><a href="" className="hover:text-accent transition-colors">Performance Marketing</a></li>
@@ -53,7 +53,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <div className="font-extrabold mb-4 text-white">Contact Info</div>
+            <div className="font-extrabold mb-4 text-white">Contact the Bigwig Social Team</div>
             <ul className="space-y-2 text-lg text-gray-300">
               <li>3rd Floor, Infront of TATA Croma, Vijay Nagar, Jabalpur, Madhya Pradesh 482002</li>
               <div className="flex mt-2">

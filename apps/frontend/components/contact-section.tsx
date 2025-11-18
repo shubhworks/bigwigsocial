@@ -196,10 +196,13 @@ export default function ContactSection() {
             {/* CTA Card */}
             <div className="bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-dark)] rounded-3xl p-8 md:p-12 text-white shadow-2xl">
               <h3 className="text-3xl md:text-4xl font-bold mb-4">
-                Take Your Business to the Next Level
+                Ready to Scale? Connect with Jabalpur's Top Digital Strategists.
               </h3>
               <p className="text-white/90 text-lg leading-relaxed mb-6">
-                Join 50+ successful businesses that have transformed their digital presence with Bigwig Social. Let's create something extraordinary together.
+                Don't wait to grow. Join 50+ successful brands that have
+partnered with us to accelerate their digital journey. Let's
+discuss a data-backed strategy tailored to your business
+needs.
               </p>
 
               <div className="flex items-center gap-2 text-white font-semibold group cursor-pointer hover:gap-3 transition-all">

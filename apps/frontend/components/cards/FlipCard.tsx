@@ -14,7 +14,7 @@ const Card = ( {logo, title, description}: {
             <h3 className="title"> {title} </h3>
           </div>
           <div className="back">
-            <p className="description flex justify-center font-bold text-2xl mt-10">
+            <p className="description flex justify-center font-bold text-2xl mt-6">
                 {description}
             </p>
           </div>

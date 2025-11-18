@@ -8,21 +8,41 @@ export default function ServicesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-text-primary)] mb-4">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-dark)]">Services</span>
+            Full-Service Digital Marketing Solutions <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-dark)]"> to Drive Your
+              Business Growth</span>
           </h2>
           <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto">
-            Comprehensive digital marketing solutions tailored to your business needs
+            <span className="font-bold"> The Complete Digital Ecosystem: </span>  From brand building to
+            performance scaling, our integrated approach delivers SEO-Enhanced Content.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          <FlipCard title="Social Media Marketing" description="We craft winning Social Media Strategies to manage your profiles, engage your audience, and boost your presence. Focused SMM for measurable results."/>
-          <FlipCard title="Content Creation" description="High-quality, engaging content and video production that captivates your audience. We create the visual and written assets that define your brand."/>
-          <FlipCard title="Performance Marketing" description="Data-driven campaigns focused solely on ROI and Conversion Optimization. We generate quality leads and guarantee measurable business outcomes."/>
+          <FlipCard title="Social Media Marketing" description="High-Impact Social Media Marketing (SMM): We craft
+data-backed, winning social media strategies to manage
+your profiles, massively increase audience engagement,
+and drive high-quality traffic focused on measurable
+ROI." />
+          <FlipCard title="Content Creation" description="SEO-Driven Content Marketing & Production: Highquality, original content and video production designed
+to captivate your audience, rank higher in search
+engines, and define your brand authority.
+" />
+          <FlipCard title="Performance Marketing" description="ROI-Focused Performance Marketing: Specialized, datadriven campaigns focused solely on
+maximizing Conversion Rate Optimization (CRO). We
+guarantee qualified lead generation and superior
+measurable business outcomes." />
         </div>
         <div className="flex justify-center mt-10 pr-40 space-x-45">
-          <FlipCard title="Website Development" description="Custom, SEO-optimized website development. We build fast, secure, and responsive web designs that serve as your 24/7 business platform."/>
-          <FlipCard title="Branding & PPC" description="Establish a powerful Brand Identity and dominate search with expert PPC Management (Google Ads). Define your brand, then amplify it through targeted ads."/>
+          <FlipCard title="Website Development" description="Custom, SEO-Optimized Web Development: We
+engineer fast, secure, and responsive websites that are
+custom-built to be your 24/7 conversion-focused
+business platform.
+" />
+          <FlipCard title="Branding & PPC" description="Strategic Branding & Expert PPC
+Management: Establish an undeniable brand identity
+and instantly dominate search results with Google Ads
+& expert Pay-Per-Click (PPC) campaigns focused on
+immediate, targeted traffic." />
         </div>
       </div>
     </section>

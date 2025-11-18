@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bigwig Social: Your Digital Marketing Agency  | BIGWIG SOCIAL",
-  description: "Bigwig Social is a digital marketing agency that helps businesses grow their online presence and reach their target audience.",
+  title: "Bigwig Social: Top Digital Marketing Agency in Jabalpur",
+  description: "Bigwig Social is a full-service Digital Marketing Agency based in Jabalpur. We drive measurable ROI, guaranteed results, and digital transformation for global brands.",
 };
 
 export default function RootLayout({

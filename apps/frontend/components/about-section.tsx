@@ -25,7 +25,8 @@ export default function AboutSection() {
           <div className="space-y-8">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[var(--color-text-primary)]">
-                About <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-dark)]">Bigwig Social</span>
+                Performance-Driven Marketing,
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-dark)]">Built on Trust.</span>
               </h2>
               <div className="h-1 w-20 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-dark)] rounded-full"></div>
             </div>
@@ -40,7 +41,8 @@ export default function AboutSection() {
                   "BRIDGING OUR EFFORTS WITH YOUR SUCCESS"
                 </p>
                 <p className="text-[var(--color-text-secondary)]">
-                  We don't charge for services; we invoice for <span className="font-bold text-[var(--color-text-primary)]">results, credibility, and value.</span>
+                  We don't just execute campaigns;
+                  we are results catalysts. We invoice only for <span className="font-bold text-[var(--color-text-primary)]">proven results, transparency, and undeniable value.</span>
                 </p>
               </div>
 

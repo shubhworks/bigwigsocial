@@ -1,20 +1,20 @@
 export default function WhatIsBigwig() {
   const values = [
     {
-      title: 'Results First',
-      description: 'We measure success by your ROI, not by our activities. Every campaign is designed with conversion in mind.'
+      title: 'Performance-First ROI',
+      description: 'We define success by your conversion rate and bottom line. We use data to ensure every rupee spent converts into measurable revenue.'
     },
     {
-      title: 'Creative Excellence',
-      description: 'Innovation is at our core. We push creative boundaries while maintaining strategic focus.'
+      title: 'Innovation & Creative Impact',
+      description: "Pushing beyond trends to craft original, engaging, and captivating content that cuts through the noise and defines your brand's voice."
     },
     {
-      title: 'Transparency',
-      description: 'No hidden metrics, no vague reporting. You always know exactly what we\'re doing and why.'
+      title: 'Complete Transparency',
+      description: "We uphold the highest ethical standards. No hidden fees, no opaque data. We provide clear, real-time reporting so you always know your campaign's true ROI."
     },
     {
-      title: 'Client Partnership',
-      description: 'We don\'t work for clients; we work with them. Your success is our success.'
+      title: 'Strategic Partnership',
+      description: "You’re not a client; you’re a partner. We embed our dynamic team into your vision for sustained, long-term digital transformation."
     }
   ]
 
@@ -24,7 +24,7 @@ export default function WhatIsBigwig() {
         {/* Section Header */}
         <div className="text-center mb-16 animate-slide-in-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[var(--color-text-primary)]">
-            What is <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-blue-400">Bigwig Social?</span>
+            Our 4 Pillars of <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-blue-400">Digital Success</span>
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-[var(--color-accent)] to-blue-400 rounded-full mx-auto mb-8"></div>
 

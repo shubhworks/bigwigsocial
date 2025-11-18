@@ -29,17 +29,17 @@ export default function OurStoryHero() {
       ctx.fillStyle = gradient
       ctx.fillRect(0, 0, width, height)
 
-          // Animated floating circles (blue/cyan instead of orange)
-          for (let i = 0; i < 5; i++) {
-            const x = width * (0.2 + i * 0.15)
-            const y = height * 0.3 + Math.sin(time * 0.02 + i) * 40
-            const radius = 30 + Math.sin(time * 0.01 + i) * 10
+      // Animated floating circles (blue/cyan instead of orange)
+      for (let i = 0; i < 5; i++) {
+        const x = width * (0.2 + i * 0.15)
+        const y = height * 0.3 + Math.sin(time * 0.02 + i) * 40
+        const radius = 30 + Math.sin(time * 0.01 + i) * 10
 
-            ctx.fillStyle = `rgba(59, 130, 246, ${0.1 + Math.sin(time * 0.02 + i) * 0.1})`
-            ctx.beginPath()
-            ctx.arc(x, y, radius, 0, Math.PI * 2)
-            ctx.fill()
-          }      time++
+        ctx.fillStyle = `rgba(59, 130, 246, ${0.1 + Math.sin(time * 0.02 + i) * 0.1})`
+        ctx.beginPath()
+        ctx.arc(x, y, radius, 0, Math.PI * 2)
+        ctx.fill()
+      } time++
       animationId = requestAnimationFrame(draw)
     }
 
@@ -70,19 +70,26 @@ export default function OurStoryHero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="text-center space-y-8 animate-slide-in-up">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-[var(--color-text-primary)]">
-            Our Story:
+            The Results-Driven DNA:
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-blue-400">
-              The Journey of Bigwig Social
+              Why Bigwig Social is Jabalpur&apos;s
+              Trusted Partner
             </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-black font-medium leading-relaxed max-w-3xl mx-auto">
-            Dedicated to transforming brands with passion, results, and integrity
+            Transforming Brands into Digital Legacies Through
+            Strategic Marketing Excellence
           </p>
 
           <div className="max-w-3xl mx-auto mt-12">
             <p className="text-lg text-black leading-relaxed mb-6">
-              Bigwig Social was founded with a singular vision: to bridge the gap between businesses and digital success. Based in Jabalpur, we embarked on a mission to prove that location doesn't limit ambition. We set out to be more than a digital marketing agency—we wanted to be a trusted partner in your growth journey.
+              Bigwig Social was founded to bridge the gap between ambitious businesses and digital excellence. Based
+              in Jabalpur, MP, we deliver full-service digital
+              strategies that generate tangible growth. We combine
+              data-driven precision with high-impact creative storytelling
+              to ensure your brand doesn't just exist online—
+              it dominates the global stage.
             </p>
 
             <p className="text-lg text-black leading-relaxed">
