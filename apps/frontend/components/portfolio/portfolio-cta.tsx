@@ -26,10 +26,10 @@ export default function PortfolioCTA({ sector }: PortfolioCTAProps) {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="#contact" className="px-8 py-4 bg-[var(--color-accent)] text-white rounded-full font-semibold hover:bg-[var(--color-accent-dark)] transition-all hover:shadow-lg">
+          <Link href="/#contact" className="px-8 py-4 bg-[var(--color-accent)] text-white rounded-full font-semibold hover:bg-[var(--color-accent-dark)] transition-all hover:shadow-lg">
             Start Your Campaign
           </Link>
-          <Link href="#portfolio" className="px-8 py-4 bg-white/20 backdrop-blur-sm text-[var(--color-text-primary)] rounded-full font-semibold border border-white/40 hover:bg-white/30 transition-all">
+          <Link href="/#portfolio" className="px-8 py-4 bg-white/20 backdrop-blur-sm text-[var(--color-text-primary)] rounded-full font-semibold border border-white/40 hover:bg-white/30 transition-all">
             View All Sectors
           </Link>
         </div>

@@ -71,10 +71,6 @@ export default function ClientSuccessStories({ sector }: ClientSuccessStoriesPro
                     ))}
                   </div>
                 )}
-
-                <button className="w-full py-2 bg-[var(--color-accent)]/10 hover:bg-[var(--color-accent)]/20 text-[var(--color-accent)] rounded-lg font-semibold text-sm transition-all">
-                  View Full Case Study →
-                </button>
               </div>
             </div>
           ))}
