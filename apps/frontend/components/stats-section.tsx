@@ -73,10 +73,10 @@ export default function StatsSection() {
   }, [])
 
   const stats: Stat[] = [
-    { label: 'Happy Clients', value: 50, suffix: '+', icon: <Target className='size-9 text-blue-600'/> },
-    { label: 'Projects Completed', value: 200, suffix: '+', icon: <Rocket className='size-9 text-blue-600'/> },
-    { label: 'Countries Reached', value: 15, suffix: '+', icon: <GLobe className='size-9 text-blue-600'/> },
-    { label: 'Team Members', value: 25, suffix: '', icon: <Users className='size-9 text-blue-600'/> },
+    { label: 'Happy Clients', value: 50, suffix: '+', icon: <Target className='size-9 text-blue-600' /> },
+    { label: 'Projects Completed', value: 200, suffix: '+', icon: <Rocket className='size-9 text-blue-600' /> },
+    { label: 'Countries Reached', value: 15, suffix: '+', icon: <GLobe className='size-9 text-blue-600' /> },
+    { label: 'Team Members', value: 25, suffix: '', icon: <Users className='size-9 text-blue-600' /> },
   ]
 
   return (
@@ -91,22 +91,41 @@ export default function StatsSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {stats.map((stat, idx) => (
             <div
               key={idx}
-              className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-white/40 group cursor-pointer"
+              className="bg-white/70 backdrop-blur-sm rounded-xl p-4 md:p-8 text-center 
+                 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 
+                 border border-white/40 group cursor-pointer"
             >
-              <div className="mb-4 flex justify-center">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[var(--color-accent)]/20 to-transparent flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-[var(--color-accent)]/40 group-hover:to-transparent transition-all">
-                  <span className="text-2xl"> {stat.icon} </span>
+              <div className="mb-3 md:mb-4 flex justify-center">
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full 
+                        bg-linear-to-br from-[var(--color-accent)]/20 to-transparent 
+                        flex items-center justify-center
+                        group-hover:bg-gradient-to-br group-hover:from-[var(--color-accent)]/40 
+                        group-hover:to-transparent transition-all">
+                  <span className="text-xl md:text-2xl">{stat.icon}</span>
                 </div>
               </div>
-              <AnimatedCounter target={stat.value} suffix={stat.suffix} isVisible={isVisible} />
-              <p className="text-[var(--color-text-secondary)] font-medium mt-4">{stat.label}</p>
+
+              {/* Counter */}
+              <div className="text-lg md:text-2xl font-bold">
+                <AnimatedCounter
+                  target={stat.value}
+                  suffix={stat.suffix}
+                  isVisible={isVisible}
+                />
+              </div>
+
+              {/* Label */}
+              <p className="text-[var(--color-text-secondary)] font-medium mt-2 md:mt-4 text-sm md:text-base">
+                {stat.label}
+              </p>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   )

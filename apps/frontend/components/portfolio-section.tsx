@@ -67,27 +67,37 @@ export default function PortfolioSection() {
           </h2>
         </div>
         {/* Portfolio Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-3 md:grid-cols-3 gap-4 md:gap-8">
           {filteredWorks.map((work, idx) => (
             <Link key={work.id} href={getCategoryLink(work.category)}>
               <div
-                className="group relative bg-white/70 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/40 hover:border-[var(--color-accent)]/50 transition-all duration-300 hover:shadow-2xl cursor-pointer animate-fade-in-scale"
+                className="group relative bg-white/70 backdrop-blur-sm rounded-xl 
+                   overflow-hidden border border-white/40 
+                   hover:border-[var(--color-accent)]/50 transition-all duration-300 
+                   hover:shadow-2xl cursor-pointer animate-fade-in-scale"
                 style={{ animationDelay: `${idx * 50}ms` }}
               >
                 {/* Image Area */}
-                <div className="relative h-56 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-accent)]/20 overflow-hidden flex items-center justify-center">
-                  <span className="text-8xl group-hover:scale-110 transition-transform duration-300">
+                <div className="relative h-28 md:h-56 
+                        bg-gradient-to-br from-[var(--color-primary)] 
+                        to-[var(--color-accent)]/20 overflow-hidden 
+                        flex items-center justify-center">
+                  <span className="text-4xl md:text-8xl group-hover:scale-110 transition-transform duration-300">
                     {work.image}
                   </span>
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
-                  <p className="text-xl text-center font-bold text-[var(--color-accent)] uppercase mb-2">
+                <div className="p-3 md:p-6">
+                  <p className="text-xs md:text-xl text-center font-bold 
+                        text-[var(--color-accent)] uppercase mb-1 md:mb-2">
                     {work.category}
                   </p>
 
-                  <button className="w-full py-2 bg-[var(--color-accent)]/10 hover:bg-[var(--color-accent)]/20 text-[var(--color-accent)] rounded-lg font-semibold text-sm transition-all">
+                  <button className="w-full py-1.5 md:py-2 
+                             bg-[var(--color-accent)]/10 hover:bg-[var(--color-accent)]/20 
+                             text-[var(--color-accent)] rounded-lg font-semibold 
+                             text-[10px] md:text-sm transition-all">
                     View Case Study →
                   </button>
                 </div>
@@ -95,6 +105,7 @@ export default function PortfolioSection() {
             </Link>
           ))}
         </div>
+
       </div>
     </section>
   )

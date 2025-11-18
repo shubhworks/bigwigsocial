@@ -13,13 +13,6 @@ import Footer from '@/components/footer'
 import Navbar from '@/components/Navbar'
 
 export default function Home() {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) return null
 
   return (
     <main className="w-full overflow-x-hidden">

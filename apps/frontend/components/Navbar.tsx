@@ -30,8 +30,8 @@ export default function Navbar() {
     <div className='flex justify-center items-center'>
       <nav
         className={`fixed top-3 w-[80%] z-50 transition-all duration-300 ${isScrolled
-            ? 'bg-white/30 backdrop-blur-md shadow-lg rounded-full'
-            : 'bg-linear-to-b from-(--color-primary) to-transparent rounded-full'
+          ? 'bg-white/30 backdrop-blur-md shadow-lg rounded-full'
+          : 'bg-linear-to-b from-(--color-primary) to-transparent rounded-full'
           }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,7 +47,7 @@ export default function Navbar() {
               />
             </Link>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation - UNTOUCHED */}
             <div className="hidden md:flex mr-6 ml-auto gap-5">
               {navLinks.map((link) => (
                 <a
@@ -60,7 +60,7 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* Desktop CTA */}
+            {/* Desktop CTA - UNTOUCHED */}
             <div className="md:block hidden mt-4">
               <NavPortfolioBtn text='Portfolio' />
             </div>
@@ -68,29 +68,31 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 hover:bg-(--color-primary) rounded-lg transition-colors"
+              className="md:hidden p-2 rounded-lg transition-colors"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
 
-          {/* Mobile Navigation */}
+          {/* Mobile Navigation Dropdown */}
           {isOpen && (
-            <div className="md:hidden absolute top-20 left-0 right-0 bg-white/95 backdrop-blur-md border-b border-border">
-              <div className="px-4 py-4 space-y-4">
+            <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border border-gray-200 rounded-2xl shadow-xl mt-2">
+              <div className="px-6 py-4 space-y-3">
                 {navLinks.map((link) => (
                   <a
                     key={link.label}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="block text-(--color-text-secondary) hover:text-accent font-medium transition-colors"
+                    className="block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-xl font-semibold transition-colors text-center"
                   >
                     {link.label}
                   </a>
                 ))}
-                <button className="w-full px-6 py-2 bg-blue-600 text-white rounded-full font-semibold hover:bg-(--color-accent-dark) transition-all">
-                  Portfolio
-                </button>
+                <div className="pt-2 border-t border-gray-100">
+                  <div className="flex justify-center">
+                    <NavPortfolioBtn text='Portfolio' />
+                  </div>
+                </div>
               </div>
             </div>
           )}

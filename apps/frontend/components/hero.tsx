@@ -44,7 +44,7 @@ export default function Hero() {
           {/* Left Content */}
           <div className="space-y-8 animate-slide-in-up">
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-[var(--color-text-primary)]">
+              <h1 className="text-5xl text-center md:text-left md:text-6xl lg:text-7xl font-bold leading-tight text-[var(--color-text-primary)]">
                 Jabalpur’s Top-Rated
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-dark)]">
                   Digital Marketing Agency
@@ -52,20 +52,22 @@ export default function Hero() {
                 for Global
                 Results. 
               </h1>
-              <p className="text-xl md:text-2xl pt-5 text-[var(--color-text-secondary)] font-medium leading-relaxed max-w-2xl">
+              <p className="text-xl text-center md:text-left md:text-2xl pt-5 text-[var(--color-text-secondary)] font-medium leading-relaxed max-w-2xl">
                 We are a full-service, results-driven team 
                 <span className='text-black font-bold'> transforming digital vision into measurable success. </span>
               </p>
             </div>
 
-            <button onClick={() => {
-              window.location.href = "/#contact"
-            }} className="group cursor-pointer px-8 py-4 bg-[var(--color-accent)] text-white rounded-full font-bold text-lg hover:bg-[var(--color-accent-dark)] transition-all hover:shadow-xl hover:scale-105 inline-flex items-center gap-2">
-              Start Your Success Story
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </button>
+            <div className='flex justify-center md:justify-start'>
+              <button onClick={() => {
+                window.location.href = "/#contact"
+              }} className="group cursor-pointer px-8 py-4 bg-[var(--color-accent)] text-white rounded-full font-bold text-lg hover:bg-[var(--color-accent-dark)] transition-all hover:shadow-xl hover:scale-105 inline-flex items-center gap-2">
+                Start Your Success Story
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </button>
+            </div>
 
-            <div className="flex items-center gap-6 pt-4 text-sm text-[var(--color-text-secondary)]">
+            <div className="flex justify-center md:justify-start items-center gap-6 pt-4 text-sm text-[var(--color-text-secondary)]">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-[var(--color-accent)] rounded-full"></div>
                 50+ Happy Clients
@@ -83,13 +85,6 @@ export default function Hero() {
               <FloatingCards />
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-[var(--color-text-secondary)] rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-2 bg-[var(--color-text-secondary)] rounded-full animate-pulse"></div>
         </div>
       </div>
     </section>

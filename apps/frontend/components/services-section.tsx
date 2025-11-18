@@ -21,8 +21,8 @@ export default function ServicesSection() {
             performance scaling, our integrated approach delivers SEO-Enhanced Content.
           </p>
         </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
+        
+        <div className="md:grid md:grid-cols-3 gap-8 hidden">
           <FlipCard logo={<Earth className="size-25"/>} title="Social Media Marketing" description="High-Impact Social Media Marketing (SMM): We craft
 data-backed, winning social media strategies to manage
 your profiles, massively increase audience engagement,
@@ -37,7 +37,7 @@ maximizing Conversion Rate Optimization (CRO). We
 guarantee qualified lead generation and superior
 measurable business outcomes." />
         </div>
-        <div className="flex justify-center mt-10 pr-30 space-x-45">
+        <div className="md:flex justify-center mt-10 pr-30 space-x-45 hidden">
           <FlipCard logo={<LaptopCode className="size-25"/>} title="Website Development" description="Custom, SEO-Optimized Web Development: We
 engineer fast, secure, and responsive websites that are
 custom-built to be your 24/7 conversion-focused

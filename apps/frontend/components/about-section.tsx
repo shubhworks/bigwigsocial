@@ -23,15 +23,15 @@ export default function AboutSection() {
 
           {/* Right - Content */}
           <div className="space-y-8">
-            <div>
+            <div className="text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[var(--color-text-primary)]">
                 Performance-Driven Marketing,
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-dark)]">Built on Trust.</span>
               </h2>
-              <div className="h-1 w-20 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-dark)] rounded-full"></div>
+              <div className="h-1 flex md:w-20 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-dark)] rounded-full"></div>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-6 md:text-left text-center">
               <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed">
                 We are a dynamic, young, and passionate team based in Jabalpur, dedicated to building and amplifying brands on the global stage. Our mission is simple yet powerful:
               </p>
@@ -52,7 +52,7 @@ export default function AboutSection() {
             </div>
 
             <Link href={'/about'}>
-              <div className="flex gap-4 flex-wrap">
+              <div className="flex justify-center md:justify-start gap-4 flex-wrap">
                 <button className="border hover:scale-95 duration-300 relative group cursor-pointer text-sky-50  overflow-hidden h-16 w-64 rounded-md bg-sky-200 p-2 flex justify-center items-center font-extrabold">
 
                   <div className="absolute right-32 -top-4  group-hover:top-1 group-hover:right-2 z-10 w-40 h-40 rounded-full group-hover:scale-150 duration-500 bg-sky-900"></div>
