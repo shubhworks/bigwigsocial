@@ -308,19 +308,19 @@ export default function TestimonialSection() {
             </div>
 
             {/* Arrows */}
-            {/* <button
+            <button
               onClick={goPrev}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 bg-white/80 backdrop-blur-sm rounded-full p-3 shadow-lg hover:bg-white transition-all z-10 hidden md:flex items-center justify-center"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 bg-white/80 backdrop-blur-sm rounded-full p-3 shadow-lg hover:bg-white transition-all z-10 flex md:hidden items-center justify-center"
             >
               <span className="text-2xl text-[var(--color-accent)]">←</span>
-            </button> */}
+            </button>
 
-            {/* <button
+            <button
               onClick={goNext}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 bg-white/80 backdrop-blur-sm rounded-full p-3 shadow-lg hover:bg-white transition-all z-10 hidden md:flex items-center justify-center"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 bg-white/80 backdrop-blur-sm rounded-full p-3 shadow-lg hover:bg-white transition-all z-10 flex md:hidden items-center justify-center"
             >
               <span className="text-2xl text-[var(--color-accent)]">→</span>
-            </button> */}
+            </button>
 
             {/* Dots */}
             <div className="flex justify-center gap-2 mt-8">
