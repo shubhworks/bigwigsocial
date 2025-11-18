@@ -1,6 +1,9 @@
 'use client'
 
-import { Star } from '@/icons/Star'
+import { GLobe } from '@/icons/Globe'
+import { Rocket } from '@/icons/Rocket'
+import { Target } from '@/icons/Target'
+import { Users } from '@/icons/Users'
 import { ReactElement, useEffect, useRef, useState } from 'react'
 
 interface Stat {
@@ -70,10 +73,10 @@ export default function StatsSection() {
   }, [])
 
   const stats: Stat[] = [
-    { label: 'Happy Clients', value: 50, suffix: '+', icon: <Star className='size-8 text-amber-400'/> },
-    { label: 'Projects Completed', value: 200, suffix: '+', icon: <Star className='size-8 text-amber-400'/> },
-    { label: 'Countries Reached', value: 15, suffix: '+', icon: <Star className='size-8 text-amber-400'/> },
-    { label: 'Team Members', value: 25, suffix: '', icon: <Star className='size-8 text-amber-400'/> },
+    { label: 'Happy Clients', value: 50, suffix: '+', icon: <Target className='size-9 text-blue-600'/> },
+    { label: 'Projects Completed', value: 200, suffix: '+', icon: <Rocket className='size-9 text-blue-600'/> },
+    { label: 'Countries Reached', value: 15, suffix: '+', icon: <GLobe className='size-9 text-blue-600'/> },
+    { label: 'Team Members', value: 25, suffix: '', icon: <Users className='size-9 text-blue-600'/> },
   ]
 
   return (
