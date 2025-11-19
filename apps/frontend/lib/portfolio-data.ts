@@ -5,7 +5,7 @@ export const portfolioSectors = {
     title: 'Education Sector Success',
     tagline: 'From Classrooms to Clicks',
     heading: 'Taking Institutes Online: Your Trusted Partner for Educational Digital Marketing',
-    description: "Today's most successful educational institutions practice digital marketing. Students heavily rely on social and digital platforms for decision-making. Bigwig Social provides tailored digital solutions to enhance visibility, drive student enrollment, and build a strong online reputation for your institute.",
+    description: "",
     proposition: "We don't just market education—we market potential. Our data-driven strategies turn prospective students into enrolled scholars and institutions into community pillars.",
     strategySteps: [
       { number: 1, title: 'Research', description: 'Analyze student demographics, course demand, and competitor digital presence.' },
@@ -19,7 +19,7 @@ export const portfolioSectors = {
         name: 'Gyan Ganga Group of Institutions',
         service: 'Digital marketing for group events and institutions',
         result: 'Full-scale event promotion and digital footprint enhancement for Gyan Ganga events. Successfully promoted Gyan Utsav with 45% increase in registrations.',
-        image: '/portfolio/education/gyan-ganga.jpg?query=educational-institution-digital-marketing',
+        image: '/portfolio/gyanganga.png',
         metrics: ['45% Registration Increase', '300+ Event Attendees', '2.5M+ Social Reach'],
       },
       {
@@ -58,7 +58,7 @@ export const portfolioSectors = {
     title: 'Where Hospitality Meets Digital Excellence',
     tagline: 'Guests First, Always',
     heading: 'Attracting a Larger Audience and Increasing Visibility for Hotels, Restaurants, and Tour Companies',
-    description: 'In the hospitality industry, your online reputation is everything. From boutique hotels to travel agencies, travelers make decisions based on reviews, visuals, and digital engagement. Bigwig Social crafts targeted campaigns to increase bookings, build brand loyalty, and establish your hospitality business as the go-to choice.',
+    description: '',
     proposition: 'We transform travel dreams into confirmed bookings through visually rich content, strategic positioning, and guest-first marketing.',
     strategySteps: [
       { number: 1, title: 'Research', description: 'Analyze travel trends, competitor positioning, and guest preferences across platforms.' },
@@ -105,7 +105,7 @@ export const portfolioSectors = {
     title: 'Digital Growth in FMCG',
     tagline: 'Fast-Moving Brands Need Fast Strategies',
     heading: 'Countering Commodity Perception: Strategic FMCG Digital Marketing',
-    description: 'In the competitive Fast-Moving Consumer Goods (FMCG) industry, standing out is essential. We apply fast-moving digital strategies to counter the perception of products as commodities and build loyal customer bases through targeted engagement and compelling brand narratives.',
+    description: '',
     proposition: 'We transform commodity products into lifestyle choices, driving purchases through visually compelling campaigns and strategic consumer engagement.',
     strategySteps: [
       { number: 1, title: 'Research', description: 'Analyze consumer behavior, market trends, competitor positioning, and retail channels.' },
@@ -152,7 +152,7 @@ export const portfolioSectors = {
     title: 'Building Trust, Driving Sales',
     tagline: 'Real Estate Digital Marketing That Moves Properties',
     heading: 'Strategic Digital Marketing Solutions That Move Properties Fast and Connect Developers with Qualified Buyers',
-    description: 'Strategic digital marketing solutions that move properties fast. We connect developers with qualified buyers, focusing on local presence in Jabalpur and maximizing visibility for exclusive projects through targeted campaigns and compelling property showcases.',
+    description: '',
     proposition: 'We transform property listings into sold homes by building trust, showcasing amenities, and connecting developers with qualified buyers at scale.',
     strategySteps: [
       { number: 1, title: 'Research', description: 'Analyze buyer demographics, market demand, competitor listings, and local real estate trends.' },
@@ -192,7 +192,7 @@ export const portfolioSectors = {
     title: 'Financial Stability Through Digital Clarity',
     tagline: 'Marketing for Financial Services That Builds Trust',
     heading: 'Building Trust and Simplifying Complex Financial Concepts Online',
-    description: 'Building trust and simplifying complex financial concepts online is our specialty. We deliver marketing that highlights credibility and expertise in the highly regulated Finance Sector, with focus on thought leadership and qualified lead generation.',
+    description: '',
     proposition: 'We position financial experts as trusted advisors, educating clients about wealth management, investment strategies, and financial stability.',
     strategySteps: [
       { number: 1, title: 'Research', description: 'Analyze financial services market, target investor profiles, and compliance requirements.' },
@@ -232,7 +232,7 @@ export const portfolioSectors = {
     title: 'Innovative Healthcare Solutions',
     tagline: 'Connecting Wellness with Patients',
     heading: 'Innovative Healthcare Solutions: Connecting Wellness with Patients and Building Trust',
-    description: 'Providing sensitive and impactful digital marketing for the Healthcare Sector. Our focus is on holistic wellness, establishing trust, and bridging health solutions with individuals seeking care through professional, patient-centric digital strategies.',
+    description: '',
     proposition: 'We help healthcare providers build trust, educate patients, and establish their institutions as leaders in wellness and holistic health.',
     strategySteps: [
       { number: 1, title: 'Research', description: 'Analyze patient search behavior, healthcare trends, and competitive positioning in your specialty.' },
@@ -272,7 +272,7 @@ export const portfolioSectors = {
     title: 'Maximum Buzz, Sold-Out Shows',
     tagline: 'Event Marketing Mastery',
     heading: 'Maximum Buzz, Sold-Out Shows: Event Marketing Mastery for Entertainment and Experiences',
-    description: 'From musical nights to stand-up comedy, we create high-energy digital campaigns that guarantee maximum visibility and drive ticket sales for Events and Entertainment. Our specialized approach combines artist appeal, FOMO marketing, and multi-channel promotion.',
+    description: '',
     proposition: 'We transform event announcements into sold-out shows by creating buzz, building anticipation, and driving ticket conversions through strategic entertainment marketing.',
     strategySteps: [
       { number: 1, title: 'Research', description: 'Analyze event audience demographics, artist popularity, and competing events in the market.' },
