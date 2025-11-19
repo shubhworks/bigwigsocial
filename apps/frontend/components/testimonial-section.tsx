@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import { Instagram } from '../icons/Instagram'
+import { Facebook } from '../icons/Facebook'
 
 export default function TestimonialSection() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -61,9 +63,13 @@ export default function TestimonialSection() {
       name: 'Mr. Ashutosh Mishra',
       company: 'Rangbhoomi Stadium',
       quote:
-        'See why Mr. Ashutosh Mishra recommends Bigwig Social for serious business promotion!',
+        'See why Mr. Ashutosh Mishra recommends Bigwig Social for serious business promotion!',
       video_horizontal: 'https://drive.google.com/file/d/1gQrOboYsEYCOn8MLtXrlGWeiHmZejIYb/view',
       video_vertical: 'https://drive.google.com/file/d/1Vim4scqIVI2nvZUnj0joqlJJZpRSqiG0/view',
+      socialHandles: {
+        instagram: "https://www.instagram.com/rangbhoomistadium?igsh=bDZqa2Z2Z3E5Y2Uz",
+        facebook: "https://www.facebook.com/share/1UJcMeHDWR",
+      },
       full_description: 'From the very beginning of our journey at Conta Venture, Big Wig Social has been a vital part of our team. In this testimonial, Mr. Ashutosh Mishra highlights the significant role Big Wig Social played in boosting our social media presence over the past glorious year. Hear how our partnership helped enhance their visibility and achieve their goals.',
     },
     {
@@ -74,6 +80,10 @@ export default function TestimonialSection() {
         'Professional, Creative, and Results-Driven Social Media Agency',
       video_horizontal: 'https://drive.google.com/file/d/1VGLdHOChwq0tVCY2fhjVJE5vDX6QIIiP/view',
       video_vertical: 'https://drive.google.com/file/d/1_iZh4wuFz0ZU3GbzDx8TNPRAPj0owG4C/view',
+      socialHandles: {
+        instagram: "https://www.instagram.com/gunforgloryjabalpur?igsh=MWxvc2t3ODNwbzdodw==",
+        facebook: "https://www.facebook.com/share/1UJcMeHDWR",
+      },
       full_description: 'Working with Big Wig Social for the past six months has been a game-changer. Mr. Ritik Tiwari praises our team for being professional, creative, and hardworking. He strongly recommends Big Wig Social for any business aiming to promote their brand, gain attraction, and create traction on social media platforms',
     },
     // {
@@ -418,6 +428,32 @@ export default function TestimonialSection() {
                   <p className="text-sm text-[var(--color-text-secondary)]">
                     {selectedTestimonial.company}
                   </p>
+                  {/* Social handles (if provided) */}
+                  {selectedTestimonial.socialHandles && (
+                    <div className="mt-3 flex items-center gap-3">
+                      {selectedTestimonial.socialHandles.instagram && (
+                        <a
+                          href={selectedTestimonial.socialHandles.instagram}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Instagram"
+                        >
+                          <Instagram className="size-10 hover:text-pink-500" />
+                        </a>
+                      )}
+
+                      {selectedTestimonial.socialHandles.facebook && (
+                        <a
+                          href={selectedTestimonial.socialHandles.facebook}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Facebook"
+                        >
+                          <Facebook className="size-10 hover:text-blue-500" />
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

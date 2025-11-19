@@ -19,7 +19,7 @@ const FlipCard = ({ logo, title, description }: AboutHeroCardProps) => {
           <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
           <div className="w-12 h-1 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-dark)] rounded-full my-2"></div>
           <p className="text-gray-600 text-sm leading-relaxed">
-            Click to learn more about our {title.toLowerCase()} services...
+            Click/Hover to learn more about our {title.toLowerCase()} services...
           </p>
           <div className="absolute bottom-4 right-4 w-8 h-8 bg-[var(--color-accent)] rounded-full flex items-center justify-center text-white text-sm opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all">
             ⟳

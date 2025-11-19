@@ -33,12 +33,12 @@ export default function ServicesSection() {
             <FlipCard
               logo={<Earth className="size-12 md:size-16" />}
               title="Social Media Marketing"
-              description="High-Impact Social Media Marketing (SMM): We craft data-backed, winning social media strategies to manage your profiles, massively increase audience engagement, and drive high-quality traffic focused on measurable ROI."
+              description="High-Impact SMM: Data-backed strategies to manage profiles, boost engagement, and drive ROI-focused traffic across all major social channels."
             />
             <FlipCard
               logo={<PenWrite className="size-12 md:size-16" />}
               title="Content Creation"
-              description="SEO-Driven Content Marketing & Production: High-quality, original content and video production designed to captivate your audience, rank higher in search engines, and define your brand authority."
+              description="SEO-Driven Content: High-quality content, including video production, designed to captivate audiences, boost search rankings, and solidify brand authority."
             />
           </div>
         </div>
@@ -48,17 +48,17 @@ export default function ServicesSection() {
           <FlipCard
             logo={<Graph className="size-12 md:size-16" />}
             title="Performance Marketing"
-            description="ROI-Focused Performance Marketing: Specialized, data-driven campaigns focused solely on maximizing Conversion Rate Optimization (CRO). We guarantee qualified lead generation and superior measurable business outcomes."
+            description="ROI-Focused Campaigns: Specialized, data-driven campaigns focused on CRO (Conversion Rate Optimization) to guarantee qualified lead generation and measurable business outcomes."
           />
           <FlipCard
             logo={<LaptopCode className="size-12 md:size-16" />}
             title="Website Development"
-            description="Custom, SEO-Optimized Web Development: We engineer fast, secure, and responsive websites that are custom-built to be your 24/7 conversion-focused business platform."
+            description="Custom Web Development: We engineer fast, secure, and SEO-optimized websites, custom-built to be your 24/7 conversion-focused business platform."
           />
           <FlipCard
             logo={<Coin className="size-12 md:size-16" />}
             title="Branding & PPC"
-            description="Strategic Branding & Expert PPC Management: Establish an undeniable brand identity and instantly dominate search results with Google Ads & expert Pay-Per-Click (PPC) campaigns focused on immediate, targeted traffic."
+            description="Branding & Expert PPC: Establish undeniable brand identity and instantly dominate search results with targeted PPC campaigns for immediate, high-quality traffic."
           />
         </div>
 
