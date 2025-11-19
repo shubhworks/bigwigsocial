@@ -7,6 +7,11 @@ type CampaignShowcaseProps = {
 }
 
 export default function CampaignShowcase({ sector }: CampaignShowcaseProps) {
+  // Only render if sector has showCampaigns enabled
+  if (!sector.showCampaigns) {
+    return null
+  }
+
   return (
     <section className="py-20 md:py-32 bg-white/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
