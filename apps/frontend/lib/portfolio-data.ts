@@ -79,7 +79,7 @@ export const portfolioSectors = {
         name: 'The New Shop',
         service: 'Retail hospitality brand digital presence and experience optimization',
         result: 'Enhanced online visibility for retail hospitality operations with 35% increase in foot traffic and reservations.',
-        image: '/portfolio',
+        image: '/portfolio/psn.png',
         metrics: ['35% Traffic Growth', '40+ Monthly Bookings', 'Location-based promotions'],
       },
     ],
@@ -126,23 +126,12 @@ export const portfolioSectors = {
         name: 'Choco Chill',
         service: 'Creative confectionery brand social engagement',
         result: 'Promoted as innovative confectionery brand with engaging social media presence and consumer interaction campaigns.',
-        image: '/portfolio/fmcg/choco-chill.jpg?query=chocolate-confectionery-brand-social',
+        image: '/portfolio/chocochill.png',
         metrics: ['60% Social Engagement Increase', '500K+ Impressions', 'Brand community growth'],
       },
     ],
     campaigns: [
-      {
-        name: 'Dhanteras & Dussehra Festival Campaigns',
-        description: 'Location-specific holiday campaigns promoting products during peak festive seasons in Jabalpur and Madhya Pradesh.',
-        image: '/portfolio/fmcg/festival-campaigns.jpg?query=diwali-dussehra-product-promotion',
-        highlights: ['Festival-specific promotions', 'Location-based targeting (Jabalpur focus)', 'Foot traffic increase', 'Seasonal sales boost'],
-      },
-      {
-        name: 'Social Commerce & Influencer Collaborations',
-        description: 'Engaging product content and influencer partnerships to build brand loyalty.',
-        image: '/portfolio/fmcg/influencer-campaigns.jpg?query=social-media-influencer-product-promotion',
-        highlights: ['Influencer collaborations', 'Social commerce setup', 'User-generated content amplification', 'Community building'],
-      },
+
     ],
   },
 
@@ -171,18 +160,7 @@ export const portfolioSectors = {
       },
     ],
     campaigns: [
-      {
-        name: 'Property Amenity Showcases (CCTV, Gardens, Secured Campus)',
-        description: 'Detailed campaigns highlighting key amenities and property features to attract quality buyers.',
-        image: '/portfolio/realestate/amenities-showcase.jpg?query=property-amenities-features-marketing',
-        highlights: ['Amenity-focused content', '360-degree property views', 'Security & comfort highlighting', 'Buyer confidence building'],
-      },
-      {
-        name: 'Financial Benefits & Monsoon Offer Campaigns',
-        description: 'Targeted promotions emphasizing financing options (90% finance) and seasonal offers to drive conversions.',
-        image: '/portfolio/realestate/financial-campaigns.jpg?query=real-estate-financing-offers-promotion',
-        highlights: ['90% financing promotions', 'Seasonal monsoon offers', 'Lead generation focus', 'Conversion optimization'],
-      },
+      
     ],
   },
 
@@ -206,7 +184,7 @@ export const portfolioSectors = {
         name: 'Prosperity Wealth (Anil Haldkar)',
         service: 'Financial services brand awareness and lead generation',
         result: 'Established thought leadership with 80% increase in qualified investment leads. Expert profile showcasing 12 crore AUM and 350+ client base with educational content on budgeting (50/30/20 Rule) and saving strategies (30-Day Rule).',
-        image: '/portfolio/finance/prosperity-wealth.jpg?query=wealth-management-financial-advisor-profile',
+        image: '/portfolio/finance.png',
         metrics: ['80% Lead Increase', '12 Crore AUM', '350+ Clients Managed'],
       },
     ],
