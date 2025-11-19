@@ -31,9 +31,13 @@ export default function ClientSuccessStories({ sector }: ClientSuccessStoriesPro
             >
               {/* Image Section - alternates left/right */}
               <div
-                className={`relative h-80 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-accent)]/20 flex items-center justify-center overflow-hidden ${
+                className={`relative h-80 cursor-pointer bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-accent)]/20 flex items-center justify-center overflow-hidden ${
                   idx % 2 === 0 ? 'lg:order-2' : 'lg:order-1'
                 }`}
+
+                onClick={() => {
+                  window.open(client.redirectLink)
+                }}
               >
                 <div className="relative w-full h-full">
                   <img
