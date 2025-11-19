@@ -9,7 +9,7 @@ type PortfolioCTAProps = {
 
 export default function PortfolioCTA({ sector }: PortfolioCTAProps) {
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] relative overflow-hidden">
+    <section className="py-20 md:py-32 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute top-10 left-1/4 w-96 h-96 bg-[var(--color-accent)]/5 rounded-full blur-3xl animate-float"></div>

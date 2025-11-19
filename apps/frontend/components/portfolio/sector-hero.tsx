@@ -8,7 +8,7 @@ type SectorHeroProps = {
 
 export default function SectorHero({ sector }: SectorHeroProps) {
   return (
-    <section className="relative min-h-[60vh] bg-gradient-to-br from-[var(--color-primary)] via-[var(--color-primary)] to-[var(--color-primary-dark)] flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-10 right-10 w-72 h-72 bg-[var(--color-accent)]/10 rounded-full blur-3xl animate-float"></div>

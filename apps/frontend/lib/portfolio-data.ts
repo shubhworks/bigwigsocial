@@ -21,7 +21,7 @@ export const portfolioSectors = {
         service: 'Digital marketing for group events and institutions',
         result: 'Full-scale event promotion and digital footprint enhancement for Gyan Ganga events. Successfully promoted Gyan Utsav with 45% increase in registrations.',
         image: '/portfolio/gyanganga.png',
-        redirectLink: '/',
+        redirectLink: 'https://www.instagram.com/gyanotsav_?igsh=MTg2Ynk4cWd4dnhndQ==',
         metrics: ['45% Registration Increase', '300+ Event Attendees', '2.5M+ Social Reach'],
       },
       {
@@ -76,18 +76,11 @@ export const portfolioSectors = {
         name: 'PSN Tours & Holidays',
         service: 'Travel agency digital marketing and package promotion',
         result: 'Successfully promoted tour packages and holiday destinations with 50% increase in travel bookings and customer inquiries.',
-        image: '/portfolio/hospitality/psn-tours.jpg?query=travel-agency-tour-packages',
+        image: '/portfolio/psn.png',
         redirectLink: 'https://www.instagram.com/psntours?igsh=MWpybHhxaXg3d2MwZg==',
         metrics: ['50% Booking Increase', '300+ Package Inquiries', 'Multi-destination promotion'],
       },
-      {
-        name: 'The New Shop',
-        service: 'Retail hospitality brand digital presence and experience optimization',
-        result: 'Enhanced online visibility for retail hospitality operations with 35% increase in foot traffic and reservations.',
-        image: '/portfolio/psn.png',
-        redirectLink: 'https://www.instagram.com/thenewshop24hour.jabalpur?igsh=aHJ3NjgyNG91aGF4',
-        metrics: ['35% Traffic Growth', '40+ Monthly Bookings', 'Location-based promotions'],
-      },
+      
     ],
     campaigns: [
       {
