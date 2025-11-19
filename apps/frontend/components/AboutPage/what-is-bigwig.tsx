@@ -27,16 +27,6 @@ export default function WhatIsBigwig() {
             Our 4 Pillars of <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-blue-400">Digital Success</span>
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-[var(--color-accent)] to-blue-400 rounded-full mx-auto mb-8"></div>
-
-          <div className="max-w-3xl mx-auto space-y-6">
-            <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed">
-              Founded in 2024, Bigwig Social emerged from a simple belief: businesses in Jabalpur and beyond deserve world-class digital marketing without compromise.
-            </p>
-
-            <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed">
-              We are not just a service provider. We are creative partners, strategic advisors, and growth catalysts. We combine data-driven insights with creative storytelling to craft campaigns that captivate, convert, and create lasting impact.
-            </p>
-          </div>
         </div>
 
         {/* Core Values Grid */}

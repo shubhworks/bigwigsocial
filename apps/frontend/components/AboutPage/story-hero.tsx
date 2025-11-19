@@ -91,10 +91,6 @@ export default function OurStoryHero() {
               to ensure your brand doesn't just exist online—
               it dominates the global stage.
             </p>
-
-            <p className="text-lg text-black leading-relaxed">
-              Every brand has a story to tell. Every business has untapped potential. We exist to help you unlock it, amplify it, and celebrate it on the global stage.
-            </p>
           </div>
         </div>
       </div>

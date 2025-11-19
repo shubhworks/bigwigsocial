@@ -15,15 +15,16 @@ export default function AboutSection() {
               <Image
                 src={`/workingtogether.jpg`}
                 alt="about image"
-                width={600}
-                height={600}
+                width={800}
+                height={800}
+                className="w-full h-64 md:h-96 object-cover rounded-2xl"
               />
             </div>
           </div>
 
           {/* Right - Content */}
           <div className="space-y-8">
-            <div className="text-center">
+            <div className="text-center md:text-left">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[var(--color-text-primary)]">
                 Performance-Driven Marketing,
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-dark)]">Built on Trust.</span>
@@ -33,7 +34,7 @@ export default function AboutSection() {
 
             <div className="space-y-6 md:text-left text-center">
               <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed">
-                We are a dynamic, young, and passionate team based in Jabalpur, dedicated to building and amplifying brands on the global stage. Our mission is simple yet powerful:
+                We are a dynamic, passionate team based in Jabalpur, dedicated to amplifying brands globally, Our Mission:
               </p>
 
               <div className="bg-white/70 backdrop-blur-sm border-l-4 border-[var(--color-accent)] p-6 rounded-lg">
@@ -41,13 +42,13 @@ export default function AboutSection() {
                   "BRIDGING OUR EFFORTS WITH YOUR SUCCESS"
                 </p>
                 <p className="text-[var(--color-text-secondary)]">
-                  We don't just execute campaigns;
-                  we are results catalysts. We invoice only for <span className="font-bold text-[var(--color-text-primary)]">proven results, transparency, and undeniable value.</span>
+                  We are not just executors; we are results catalysts. We invoice only for
+                  <span className="font-bold text-[var(--color-text-primary)]"> proven results, transparency, and undeniable value. </span>
                 </p>
               </div>
 
               <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                Every campaign is crafted with precision, every strategy backed by data, and every result measured by impact. We believe in transparency, innovation, and the power of storytelling to transform businesses.
+                Every strategy is backed by data, crafted with precision, and measured strictly by impact. We turn ambition into success.
               </p>
             </div>
 

@@ -10,17 +10,17 @@ export default function PortfolioSection() {
 
   const scrollLeft = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: -250, behavior: 'smooth' })
+      carouselRef.current.scrollBy({ left: -350, behavior: 'smooth' })
     }
   }
 
   const scrollRight = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: 250, behavior: 'smooth' })
+      carouselRef.current.scrollBy({ left: 350, behavior: 'smooth' })
     }
   }
 
-  // Map category names to portfolio sector IDs
+  // Category -> Link mapping
   const getCategoryLink = (category: string): string => {
     const sectorMap: { [key: string]: string } = {
       'EDUCATION': 'education',
@@ -33,8 +33,6 @@ export default function PortfolioSection() {
     return `/portfolio/${sectorMap[category] || 'education'}`
   }
 
-  const filters = ['ALL WORKS', 'EDUCATION', 'FMCG', 'REAL ESTATE', 'FINANCE', 'HOSPITALITY']
-
   const works = [
     { id: 1, category: 'EDUCATION', image: '🎓' },
     { id: 2, category: 'FMCG', image: '🛍️' },
@@ -45,9 +43,7 @@ export default function PortfolioSection() {
   ]
 
   const filteredWorks =
-    activeFilter === 'ALL WORKS'
-      ? works
-      : works.filter(work => work.category === activeFilter)
+    activeFilter === 'ALL WORKS' ? works : works.filter(w => w.category === activeFilter)
 
   return (
     <section id="portfolio" className="py-20 md:py-32 bg-[var(--color-primary)]">
@@ -59,56 +55,93 @@ export default function PortfolioSection() {
           </h2>
         </div>
 
-        {/* ================= MOBILE CAROUSEL ================= */}
-        <div className="md:hidden relative">
-          {/* Left Button */}
+        {/* ============== UNIVERSAL CAROUSEL (Mobile + Desktop) ============== */}
+        <div className="relative">
+
+          {/* LEFT BUTTON */}
           <button
             onClick={scrollLeft}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-lg"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 
+                     bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-lg hidden md:flex"
           >
             ◀
           </button>
 
-          {/* Right Button */}
+          {/* RIGHT BUTTON */}
           <button
             onClick={scrollRight}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-lg"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 
+                     bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-lg hidden md:flex"
           >
             ▶
           </button>
 
+          {/* MOBILE BUTTONS SMALLER */}
+          <button
+            onClick={scrollLeft}
+            className="absolute left-1 top-1/2 -translate-y-1/2 z-20 
+                     bg-white/80 p-2 rounded-full shadow-md md:hidden"
+          >
+            ◀
+          </button>
+
+          <button
+            onClick={scrollRight}
+            className="absolute right-1 top/2- translate-y-1/2 z-20 
+                     bg-white/80 p-2 rounded-full shadow-md md:hidden"
+          >
+            ▶
+          </button>
+
+          {/* CAROUSEL CONTAINER */}
           <div
             ref={carouselRef}
-            className="flex overflow-x-scroll scrollbar-hide gap-4 py-4 scroll-smooth"
+            className="
+              flex overflow-x-scroll scrollbar-hide gap-6 py-4 scroll-smooth
+            "
           >
             {filteredWorks.map((work, idx) => (
-              <Link key={work.id} href={getCategoryLink(work.category)} className="min-w-[80%]">
+              <Link
+                key={work.id}
+                href={getCategoryLink(work.category)}
+                className="
+                  min-w-[75%] 
+                  sm:min-w-[50%]
+                  md:min-w-[33%] 
+                  lg:min-w-[30%]
+                  xl:min-w-[25%]
+                "
+              >
                 <div
                   className="group relative bg-white/70 backdrop-blur-sm rounded-xl 
-                    overflow-hidden border border-white/40 
-                    hover:border-[var(--color-accent)]/50 transition-all duration-300 
-                    hover:shadow-2xl cursor-pointer"
+                             overflow-hidden border border-white/40 
+                             hover:border-[var(--color-accent)]/50 transition-all duration-300 
+                             hover:shadow-2xl cursor-pointer"
                   style={{ animationDelay: `${idx * 50}ms` }}
                 >
-                  {/* Image Area */}
-                  <div className="relative h-40 
-                    bg-gradient-to-br from-[var(--color-primary)] 
-                    to-[var(--color-accent)]/20 flex items-center justify-center">
-                    <span className="text-6xl group-hover:scale-110 transition-transform duration-300">
+                  {/* IMAGE */}
+                  <div className="
+                      relative h-40 md:h-56 
+                      bg-gradient-to-br from-[var(--color-primary)] 
+                      to-[var(--color-accent)]/20 flex items-center justify-center
+                    "
+                  >
+                    <span className="text-6xl md:text-8xl group-hover:scale-110 transition-transform duration-300">
                       {work.image}
                     </span>
                   </div>
 
-                  {/* Content */}
-                  <div className="p-4">
-                    <p className="text-base text-center font-bold 
-                      text-[var(--color-accent)] uppercase mb-2">
+                  {/* CONTENT */}
+                  <div className="p-4 md:p-6">
+                    <p className="text-base md:text-xl text-center font-bold 
+                                  text-[var(--color-accent)] uppercase mb-2">
                       {work.category}
                     </p>
 
                     <button className="w-full py-2 
                       bg-[var(--color-accent)]/10 hover:bg-[var(--color-accent)]/20 
-                      text-[var(--color-accent)] rounded-lg font-semibold text-sm transition-all">
+                      text-[var(--color-accent)] rounded-lg font-semibold 
+                      text-sm md:text-base transition-all">
                       View Case Study →
                     </button>
                   </div>
@@ -116,45 +149,6 @@ export default function PortfolioSection() {
               </Link>
             ))}
           </div>
-        </div>
-
-        {/* ================= DESKTOP GRID (Untouched) ================= */}
-        <div className="hidden md:grid md:grid-cols-3 gap-8">
-          {filteredWorks.map((work, idx) => (
-            <Link key={work.id} href={getCategoryLink(work.category)}>
-              <div
-                className="group relative bg-white/70 backdrop-blur-sm rounded-xl 
-                   overflow-hidden border border-white/40 
-                   hover:border-[var(--color-accent)]/50 transition-all duration-300 
-                   hover:shadow-2xl cursor-pointer animate-fade-in-scale"
-                style={{ animationDelay: `${idx * 50}ms` }}
-              >
-                {/* Image Area */}
-                <div className="relative h-56 
-                        bg-gradient-to-br from-[var(--color-primary)] 
-                        to-[var(--color-accent)]/20 flex items-center justify-center">
-                  <span className="text-8xl group-hover:scale-110 transition-transform duration-300">
-                    {work.image}
-                  </span>
-                </div>
-
-                {/* Content */}
-                <div className="p-6">
-                  <p className="text-xl text-center font-bold 
-                        text-[var(--color-accent)] uppercase mb-2">
-                    {work.category}
-                  </p>
-
-                  <button className="w-full py-2 
-                             bg-[var(--color-accent)]/10 hover:bg-[var(--color-accent)]/20 
-                             text-[var(--color-accent)] rounded-lg font-semibold 
-                             text-sm transition-all">
-                    View Case Study →
-                  </button>
-                </div>
-              </div>
-            </Link>
-          ))}
         </div>
 
       </div>

@@ -26,7 +26,6 @@ export default function AboutPage() {
       <WhatIsBigwig />
       <MeetFounder />
       <AchievementsSection />
-      <TeamSection />
       <StoryCTA />
       <Footer />
     </main>

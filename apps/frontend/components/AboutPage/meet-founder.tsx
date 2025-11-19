@@ -37,25 +37,21 @@ export default function MeetFounder() {
 
             <div className="space-y-6">
               <p className="text-lg text-black leading-relaxed">
-                With over a decade of experience in digital marketing and brand building, our founder envisioned a different kind of agency. One that wouldn't settle for "good enough," but instead would challenge every assumption, push every boundary, and deliver extraordinary results.
+                With over a decade of experience, our founder built Bigwig Social to be different. She envisioned an agency that doesn't just settle for "good enough," but challenges every boundary to deliver extraordinary results.
               </p>
 
               <p className="text-lg text-black leading-relaxed">
-                Her background spans strategy, creative direction, and performance marketing. She believed that the best ideas come from combining data-driven thinking with unbridled creativity and she built Bigwig Social on exactly that foundation.
+                Her expertise spans strategy, creative direction, and performance marketing, proving that the best results come from combining data-driven thinking with unbridled creativity.
               </p>
 
               {/* Founder Quote */}
               <div className="bg-gradient-to-br from-[var(--color-accent)]/10 to-blue-400/5 border-l-4 border-[var(--color-accent)] p-8 rounded-lg my-8">
                 <p className="text-xl md:text-2xl font-bold text-[var(--color-accent)] mb-3">
-                  "The future of digital marketing isn't about louder messages—it's about smarter strategies and authentic connections."
+                  "The future of digital marketing isn't about louder messages, it's about smarter strategies and authentic connections."
                 </p>
                 <p className="text-[var(--color-text-secondary)] font-semibold">Rachita Jain</p>
                 <p className="text-[var(--color-text-secondary)] font-semibold">~ Founder, Bigwig Social</p>
               </div>
-
-              <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed">
-                Today, she leads a team of passionate professionals committed to proving that impact and integrity are not mutually exclusive. Her vision drives us every single day.
-              </p>
             </div>
           </div>
         </div>

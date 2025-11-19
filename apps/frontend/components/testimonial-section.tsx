@@ -235,7 +235,7 @@ export default function TestimonialSection() {
             {/* Carousel */}
             <div
               ref={carouselRef}
-              className="flex gap-6 overflow-x-hidden scroll-smooth snap-x snap-mandatory"
+              className="flex gap-6 overflow-x-hidden scroll-smooth snap-x md:justify-center md:space-x-30 snap-mandatory"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               onMouseDown={handleStart}
               onMouseMove={handleMove}
