@@ -501,6 +501,12 @@ export default function TestimonialSection() {
         .animate-scroll {
           animation: scroll 15s linear infinite;
         }
+        
+        @media (max-width: 768px) {
+  .animate-scroll {
+    animation-duration: 3 s; /* faster on mobile */
+  }
+}
         @font-face {
           font-family: 'handwriting';
           src: url('data:font/woff2;base64,d09GMgABAAAAAAToAA0AAAAA2AAAAAwAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAFQHYACCBhgKrnyGR7FUWQMsCwABaIGEBCQKo3WDd4APJQsqGxrXvqjgFh2SaYgEVICWNCBgdGVsLnRlIQAA/v/78+O9ezIvEv7/v//9v/zv9e99d8f0+87GHZnxBiZRSppEJZGVVBJVSERmMhEBwBCNURAQjAjCGCgAyGBBYMjlAcCYy8EBS+wQSASyQAKwNTUDDlwYgXpyYxBjUJR1jiLj4EDW3C7gKVJT3S4gBwcOZc3tApmGRtl1e5GrIQ5kze0aXM3xVd0F/6v63wEFJXO7gBwcXiTk5fVHXQnkKfKrIEdL0H9V10twv5vXBbiV0RfgVka3Q0hMvhJ9efhOVA0P42j/aWGFjZi4aCvLi0QKI6xvV8cNvgkE8gWwWNmZZONrpXCZbj7BdYBvfNfMFpzA3uX0eI0x6/X8xkPvS5//hxIkxh8SYxQc1CAFUi2B+ASmGDYLbDjT3wbsYCxQNqZUUBfVVQU1VXHbvHMAA') format('woff2');
