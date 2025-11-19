@@ -5,58 +5,58 @@ import { useEffect, useRef } from 'react'
 export default function OurStoryHero() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
-  useEffect(() => {
-    const canvas = canvasRef.current
-    if (!canvas) return
+  // useEffect(() => {
+  //   const canvas = canvasRef.current
+  //   if (!canvas) return
 
-    const ctx = canvas.getContext('2d')
-    if (!ctx) return
+  //   const ctx = canvas.getContext('2d')
+  //   if (!ctx) return
 
-    canvas.width = canvas.offsetWidth
-    canvas.height = canvas.offsetHeight
+  //   canvas.width = canvas.offsetWidth
+  //   canvas.height = canvas.offsetHeight
 
-    let animationId: number
-    let time = 0
+  //   let animationId: number
+  //   let time = 0
 
-    const draw = () => {
-      const width = canvas.width
-      const height = canvas.height
+  //   const draw = () => {
+  //     const width = canvas.width
+  //     const height = canvas.height
 
-      // Background gradient
-      const gradient = ctx.createLinearGradient(0, 0, 0, height)
-      gradient.addColorStop(0, '#c5e7fb')
-      gradient.addColorStop(1, '#e0f2fe')
-      ctx.fillStyle = gradient
-      ctx.fillRect(0, 0, width, height)
+  //     // Background gradient
+  //     const gradient = ctx.createLinearGradient(0, 0, 0, height)
+  //     gradient.addColorStop(0, '#c5e7fb')
+  //     gradient.addColorStop(1, '#e0f2fe')
+  //     ctx.fillStyle = gradient
+  //     ctx.fillRect(0, 0, width, height)
 
-      // Animated floating circles (blue/cyan instead of orange)
-      for (let i = 0; i < 5; i++) {
-        const x = width * (0.2 + i * 0.15)
-        const y = height * 0.3 + Math.sin(time * 0.02 + i) * 40
-        const radius = 30 + Math.sin(time * 0.01 + i) * 10
+  //     // Animated floating circles (blue/cyan instead of orange)
+  //     for (let i = 0; i < 5; i++) {
+  //       const x = width * (0.2 + i * 0.15)
+  //       const y = height * 0.3 + Math.sin(time * 0.02 + i) * 40
+  //       const radius = 30 + Math.sin(time * 0.01 + i) * 10
 
-        ctx.fillStyle = `rgba(59, 130, 246, ${0.1 + Math.sin(time * 0.02 + i) * 0.1})`
-        ctx.beginPath()
-        ctx.arc(x, y, radius, 0, Math.PI * 2)
-        ctx.fill()
-      } time++
-      animationId = requestAnimationFrame(draw)
-    }
+  //       ctx.fillStyle = `rgba(59, 130, 246, ${0.1 + Math.sin(time * 0.02 + i) * 0.1})`
+  //       ctx.beginPath()
+  //       ctx.arc(x, y, radius, 0, Math.PI * 2)
+  //       ctx.fill()
+  //     } time++
+  //     animationId = requestAnimationFrame(draw)
+  //   }
 
-    draw()
+  //   draw()
 
-    const handleResize = () => {
-      canvas.width = canvas.offsetWidth
-      canvas.height = canvas.offsetHeight
-    }
+  //   const handleResize = () => {
+  //     canvas.width = canvas.offsetWidth
+  //     canvas.height = canvas.offsetHeight
+  //   }
 
-    window.addEventListener('resize', handleResize)
+  //   window.addEventListener('resize', handleResize)
 
-    return () => {
-      cancelAnimationFrame(animationId)
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
+  //   return () => {
+  //     cancelAnimationFrame(animationId)
+  //     window.removeEventListener('resize', handleResize)
+  //   }
+  // }, [])
 
   return (
     <section className="relative w-full min-h-screen pt-32 pb-20 flex items-center overflow-hidden">

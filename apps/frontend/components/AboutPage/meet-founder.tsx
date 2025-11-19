@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function MeetFounder() {
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-b from-white/20 to-transparent">
+    <section className="py-20 md:py-32 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left - Visual */}
