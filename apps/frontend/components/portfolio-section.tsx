@@ -29,6 +29,7 @@ export default function PortfolioSection() {
       'REAL ESTATE': 'realEstate',
       'HOSPITALITY': 'hospitality',
       'Events/Entertainment': 'events',
+      'Sports': 'sports',
     }
     return `/portfolio/${sectorMap[category] || 'education'}`
   }
@@ -40,6 +41,7 @@ export default function PortfolioSection() {
     { id: 4, category: 'REAL ESTATE', image: '🏢' },
     { id: 5, category: 'HOSPITALITY', image: '🏨' },
     { id: 6, category: 'Events/Entertainment', image: '💻' },
+    { id: 7, category: 'Sports', image: '🏅' },
   ]
 
   const filteredWorks =

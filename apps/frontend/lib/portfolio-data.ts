@@ -127,7 +127,7 @@ export const portfolioSectors = {
         name: 'Choco Chill',
         service: 'Creative confectionery brand social engagement',
         result: 'Promoted as innovative confectionery brand with engaging social media presence and consumer interaction campaigns.',
-        image: '/portfolio/chocochill.png',
+        image: '/portfolio/chocochip.jpg',
         redirectLink: 'https://www.instagram.com/chocochill.chocolates_by_palak?igsh=aDB2MHFycTVvNHo1',
         metrics: ['60% Social Engagement Increase', '500K+ Impressions', 'Brand community growth'],
       },
@@ -309,6 +309,44 @@ export const portfolioSectors = {
       },
     ],
   },
+  sports: {
+    id: 'sports',
+    icon: '🏅',
+    title: 'Winning Digital Strategies for Sports & Academies',
+    tagline: 'From Training Ground to Global Podium',
+    showCampaigns: false,
+    heading: 'Where Discipline Meets Digital Excellence',
+    description: '',
+    proposition: 'We transform passion into measurable success by building athlete communities and driving participation through high-energy digital campaigns.',
+    strategySteps: [
+      { number: 1, title: 'Research', description: 'Analyze competitor academies, sports events, and target demographics (parents/athletes).' },
+      { number: 2, title: 'Strategize', description: 'Plan campaigns focused on seasonal enrollments and event ticket sales via geo-targeted SMM & PPC.' },
+      { number: 3, title: 'Develop', description: 'Create high-impact content: athlete profiles, event highlight reels, and training videos (optimizing for mobile viewing).' },
+      { number: 4, title: 'Implement', description: 'Run lead generation campaigns for enrollments and manage real-time social media coverage for live events.' },
+      { number: 5, title: 'Evaluate & Optimize', description: 'Track registrations, measure attendance boosts, and adjust campaigns for maximum ROI on participation.' },
+    ],
+    clients: [
+      {
+        name: 'Gun For Glory Shooting Academy',
+        service: 'Association Announcement & Tournament Promotion',
+        result: 'Successful promotion of Doon International collaboration and shooting tournaments.',
+        image: '/portfolio/gunforglory.png',
+        redirectLink: 'https://www.instagram.com/gunforgloryjabalpur?igsh=MWxvc2t3ODNwbzdodw==',
+        metrics: ['+40% Enrollment Increase', '5 Days Sell-Out Rate', 'Top State Rank Visibility'],
+      },
+      {
+        name: 'Rangbhoomi Stadium / Summer Camp',
+        service: 'Building Community & Promoting Summer Camps',
+        result: 'Successful summer camp promotion and facility engagement campaigns.',
+        image: '/portfolio/rangbhoomi.png',
+        redirectLink: 'https://www.instagram.com/rangbhoomistadium?igsh=bDZqa2Z2Z3E5Y2Uz',
+        metrics: ['+60% Social Media Reach', '150+ Leads Generated', 'Full Camp Capacity'],
+      },
+    ],
+    campaigns: [
+  
+    ],
+  }
 }
 
 export type SectorKey = keyof typeof portfolioSectors
