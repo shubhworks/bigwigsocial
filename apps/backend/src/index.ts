@@ -26,7 +26,7 @@ app.use(express.json());
 
 
 app.get('/', (req: Request, res: Response) => {
-    res.send('Backend server is running!');
+    res.send("BigWigSocial's Backend server is Up!!");
 });
 
 
