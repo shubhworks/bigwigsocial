@@ -31,7 +31,7 @@ export default function ServicesSection() {
           {/* First Two Cards */}
           <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             <FlipCard
-              logo={<Earth className="size-12 md:size-16" />}
+              logo={<Earth className="size-12 md:size-16 text-white" />}
               title="Social Media Marketing"
               description="High-Impact SMM: Data-backed strategies to manage profiles, boost engagement, and drive ROI-focused traffic across all major social channels."
             />

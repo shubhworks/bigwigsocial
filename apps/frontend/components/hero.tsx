@@ -44,7 +44,7 @@ export default function Hero() {
           {/* Left Content */}
           <div className="space-y-8 animate-slide-in-up">
             <div className="space-y-4">
-              <h1 className="text-4xl text-center md:text-left md:text-6xl lg:text-7xl font-bold leading-tight text-[var(--color-text-primary)]">
+              <h1 className="text-4xl text-center md:text-left md:text-6xl lg:text-6xl font-bold leading-tight text-[var(--color-text-primary)]">
                 Jabalpur’s Top-Rated
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-dark)]">
                   Digital Marketing Agency

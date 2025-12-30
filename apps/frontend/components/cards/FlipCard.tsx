@@ -27,11 +27,11 @@ const FlipCard = ({ logo, title, description }: AboutHeroCardProps) => {
         </div>
 
         {/* Back Side */}
-        <div className="absolute font-bold inset-0 bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-dark)] rounded-2xl p-6 flex flex-col justify-center items-center text-center backface-hidden rotate-y-180 text-white">
+        <div className="absolute font-bold inset-0 bg-linear-to-br from-accent to-(--color-accent-dark) rounded-2xl p-6 flex flex-col justify-center items-center text-center backface-hidden rotate-y-180 text-white">
           <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4 backdrop-blur-sm">
             {logo}
           </div>
-          <h4 className="text-lg font-semibold mb-2">{title}</h4>
+          <h4 className="text-lg font-bold mb-2 text-white">{title}</h4>
           <div className="w-10 h-0.5 bg-white/60 rounded-full my-2"></div>
           <div className="text-sm leading-relaxed opacity-90 max-h-28 overflow-y-auto pr-2 scrollbar-thin">
             {description}

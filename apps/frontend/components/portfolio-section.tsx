@@ -34,14 +34,27 @@ export default function PortfolioSection() {
     return `/portfolio/${sectorMap[category] || 'education'}`
   }
 
+    const getIconFilename = (category: string): string => {
+      const map: { [key: string]: string } = {
+        'EDUCATION': 'education.png',
+        'FMCG': 'fmcg.png',
+        'FINANCE': 'finance.png',
+        'REAL ESTATE': 'realestate.png',
+        'HOSPITALITY': 'hospitality.png',
+        'Events/Entertainment': 'entertainment.png',
+        'Sports': 'sports.png',
+      }
+      return map[category] || 'education.png'
+    }
+
   const works = [
-    { id: 1, category: 'EDUCATION', image: '🎓' },
-    { id: 2, category: 'FMCG', image: '🛍️' },
-    { id: 3, category: 'FINANCE', image: '💰' },
-    { id: 4, category: 'REAL ESTATE', image: '🏢' },
-    { id: 5, category: 'HOSPITALITY', image: '🏨' },
-    { id: 6, category: 'Events/Entertainment', image: '💻' },
-    { id: 7, category: 'Sports', image: '🏅' },
+    { id: 1, category: 'EDUCATION' },
+    { id: 2, category: 'FMCG' },
+    { id: 3, category: 'FINANCE' },
+    { id: 4, category: 'REAL ESTATE' },
+    { id: 5, category: 'HOSPITALITY' },
+    { id: 6, category: 'Events/Entertainment' },
+    { id: 7, category: 'Sports' },
   ]
 
   const filteredWorks =
@@ -128,9 +141,11 @@ export default function PortfolioSection() {
                       to-[var(--color-accent)]/20 flex items-center justify-center
                     "
                   >
-                    <span className="text-6xl md:text-8xl group-hover:scale-110 transition-transform duration-300">
-                      {work.image}
-                    </span>
+                    <img
+                      src={`/portfolioIcons/${getIconFilename(work.category)}`}
+                      alt={`${work.category} icon`}
+                      className="h-20 md:h-28 object-contain group-hover:scale-110 transition-transform duration-300"
+                    />
                   </div>
 
                   {/* CONTENT */}
