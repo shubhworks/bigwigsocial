@@ -100,13 +100,13 @@ export default function OurStoryHero() {
                 <div className="absolute inset-0 border-2 border-blue-200/50 rounded-full animate-spin-reverse-slow">
                   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white border border-blue-300 rounded-full p-3 shadow-md">
                     <div className="text-center">
-                      <div className="text-lg font-bold text-blue-600">100+</div>
+                      <div className="text-lg font-bold text-blue-600">200+</div>
                       <div className="text-xs text-gray-600">Projects</div>
                     </div>
                   </div>
                   <div className="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 bg-white border border-purple-300 rounded-full p-3 shadow-md">
                     <div className="text-center">
-                      <div className="text-lg font-bold text-purple-600">5+</div>
+                      <div className="text-lg font-bold text-purple-600">2+</div>
                       <div className="text-xs text-gray-600">Years</div>
                     </div>
                   </div>
