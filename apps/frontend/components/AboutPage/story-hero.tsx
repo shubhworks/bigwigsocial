@@ -27,7 +27,7 @@ export default function OurStoryHero() {
                   <div className="w-6 h-6 bg-blue-400 rounded-full" />
                 </div>
                 <div className="absolute top-1/4 right-0 transform translate-x-1/2">
-                  <div className="w-5 h-5 bg-purple-400 rounded-full" />
+                  <div className="w-5 h-5 bg-cyan-400 rounded-full" />
                 </div>
                 <div className="absolute bottom-1/4 right-0 transform translate-x-1/2">
                   <div className="w-4 h-4 bg-cyan-400 rounded-full" />
@@ -36,7 +36,7 @@ export default function OurStoryHero() {
                   <div className="w-6 h-6 bg-blue-400 rounded-full" />
                 </div>
                 <div className="absolute bottom-1/4 left-0 transform -translate-x-1/2">
-                  <div className="w-5 h-5 bg-purple-400 rounded-full" />
+                  <div className="w-5 h-5 bg-cyan-400 rounded-full" />
                 </div>
                 <div className="absolute top-1/4 left-0 transform -translate-x-1/2">
                   <div className="w-4 h-4 bg-cyan-400 rounded-full" />
@@ -50,7 +50,7 @@ export default function OurStoryHero() {
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
                       The Results-Driven DNA:
                     </h1>
-                    <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                    <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500">
                       Why Bigwig Social is Jabalpur&apos;s Trusted Partner
                     </div>
                   </div>
@@ -74,7 +74,7 @@ export default function OurStoryHero() {
 
             {/* Second Floating Box - Main Content */}
             <div className="relative animate-float-slow">
-              <div className="absolute -top-3 -right-3 w-6 h-6 bg-purple-400 rounded-full animate-ping-slow" />
+              <div className="absolute -top-3 -right-3 w-6 h-6 bg-blue-400 rounded-full animate-ping-slow" />
               <div className="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl p-6 shadow-lg transform -rotate-1 hover:rotate-0 transition-transform duration-300">
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
@@ -84,7 +84,7 @@ export default function OurStoryHero() {
                     </p>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0" />
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
                     <p className="text-lg text-gray-700">
                       We combine data-driven precision with high-impact creative storytelling to ensure your brand doesn't just exist online—it dominates the global stage.
                     </p>
