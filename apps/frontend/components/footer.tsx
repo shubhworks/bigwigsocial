@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="text-center md:text-left flex flex-col items-center md:items-start">
             <div className="flex justify-center md:justify-start mb-4">
               <Image
-                src={`/bigwigsocialWhite.png`}
+                src={`/newLogoWhite.png`}
                 alt="Bigwig Social Logo"
                 width={200}
                 height={60}

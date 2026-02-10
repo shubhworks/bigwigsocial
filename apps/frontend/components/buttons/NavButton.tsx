@@ -13,7 +13,7 @@ const NavPortfolioBtn = ({text}: {
                 <span className="button_lg relative block py-[10px] px-[20px] text-white bg-[#0f1923] overflow-hidden shadow-[inset_0_0_0_1px_transparent]">
 
                     {/* Sliding red bar */}
-                    <span className="button_sl absolute top-0 -bottom-px left-[-8px] w-0 bg-[#2d3af8] skew-x-[-15deg] transition-all duration-200 ease-linear"></span>
+                    <span className="button_sl absolute top-0 -bottom-px left-[-8px] w-0 bg-[#ef4444] skew-x-[-15deg] transition-all duration-200 ease-linear"></span>
 
                     <span className="relative"> {text} </span>
                 </span>

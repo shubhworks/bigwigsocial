@@ -73,10 +73,10 @@ export default function StatsSection() {
   }, [])
 
   const stats: Stat[] = [
-    { label: 'Happy Clients', value: 50, suffix: '+', icon: <Target className='size-9 text-blue-600' /> },
-    { label: 'Projects Completed', value: 200, suffix: '+', icon: <Rocket className='size-9 text-blue-600' /> },
-    { label: 'States Reached', value: 15, suffix: '+', icon: <GLobe className='size-9 text-blue-600' /> },
-    { label: 'Team Members', value: 25, suffix: '', icon: <Users className='size-9 text-blue-600' /> },
+    { label: 'Happy Clients', value: 50, suffix: '+', icon: <Target className='size-9 text-red-600' /> },
+    { label: 'Projects Completed', value: 200, suffix: '+', icon: <Rocket className='size-9 text-red-600' /> },
+    { label: 'States Reached', value: 15, suffix: '+', icon: <GLobe className='size-9 text-red-600' /> },
+    { label: 'Team Members', value: 25, suffix: '', icon: <Users className='size-9 text-red-600' /> },
   ]
 
   return (

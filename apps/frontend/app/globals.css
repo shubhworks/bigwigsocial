@@ -3,10 +3,10 @@
 @theme {
   --font-sans: "Poppins", system-ui, -apple-system, sans-serif;
 
-  /* Primary Colors */
-  --color-primary: #c5e7fb;
-  --color-primary-dark: #a8d8f7;
-  --color-primary-darker: #8bc9f3;
+  /* Primary Colors - Red Theme */
+  --color-primary: #fee2e2;
+  --color-primary-dark: #fecaca;
+  --color-primary-darker: #fca5a5;
 
   /* Neutral Colors */
   --color-neutral-dark: #1a1f2e;
@@ -14,22 +14,22 @@
   --color-neutral-light: #f8f9fa;
   --color-neutral-gray: #6b7280;
 
-  /* Accent Colors */
-  --color-accent: #2563eb;
-  --color-accent-dark: #1e40af;
-  --color-accent-light: #3b82f6;
+  /* Accent Colors - Red Theme */
+  --color-accent: #ef4444;
+  --color-accent-dark: #dc2626;
+  --color-accent-light: #f87171;
 
   /* Semantic Tokens */
-  --color-background: #c5e7fb;
+  --color-background: #fee2e2;
   --color-foreground: #0f1419;
   --color-text-primary: #1a1f2e;
   --color-text-secondary: #6b7280;
   --color-text-light: #ffffff;
   --color-card-bg: rgba(255, 255, 255, 0.95);
   --color-card-bg-dark: rgba(26, 31, 46, 0.95);
-  --color-border: #dbeafe;
+  --color-border: #fecaca;
   --color-border-dark: #1e293b;
-  --color-button-hover: #1e40af;
+  --color-button-hover: #dc2626;
   --color-shadow: rgba(26, 31, 46, 0.12);
   --color-shadow-lg: rgba(26, 31, 46, 0.2);
 
@@ -49,7 +49,7 @@ html {
 }
 
 body {
-  background: #c5e7fb;
+  background: #fee2e2;
   color: var(--color-text-primary);
   font-weight: 400;
 }
@@ -69,10 +69,10 @@ body {
 @keyframes glow {
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
   }
   50% {
-    box-shadow: 0 0 30px rgba(37, 99, 235, 0.6);
+    box-shadow: 0 0 30px rgba(239, 68, 68, 0.6);
   }
 }
 

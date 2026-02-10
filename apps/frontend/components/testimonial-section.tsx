@@ -449,7 +449,7 @@ export default function TestimonialSection() {
                           rel="noopener noreferrer"
                           aria-label="Facebook"
                         >
-                          <Facebook className="size-10 hover:text-blue-500" />
+                          <Facebook className="size-10 hover:text-red-500" />
                         </a>
                       )}
                     </div>
