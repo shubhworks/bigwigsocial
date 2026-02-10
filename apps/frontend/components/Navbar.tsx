@@ -39,7 +39,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
               <Image
-                src={`/bigwigsocialLogo.png`}
+                src={`/newLogo.png`}
                 alt="Bigwig Social Logo"
                 width={200}
                 height={200}
@@ -53,7 +53,7 @@ export default function Navbar() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-black hover:bg-blue-200 p-3 rounded-3xl  hover:text-blue-600 font-extrabold text-xl transition-colors"
+                  className="text-black hover:bg-rose-200 p-3 rounded-3xl hover:text-rose-600 font-extrabold text-xl transition-colors"
                 >
                   {link.label}
                 </a>
@@ -83,7 +83,7 @@ export default function Navbar() {
                     key={link.label}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-xl font-semibold transition-colors text-center"
+                    className="block py-3 px-4 text-gray-700 hover:bg-rose-50 hover:text-rose-600 rounded-xl font-semibold transition-colors text-center"
                   >
                     {link.label}
                   </a>

@@ -9,7 +9,7 @@ export default function StoryCTA() {
         <div className="space-y-8 animate-slide-in-up">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--color-text-primary)]">
             Ready to Start Your
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-blue-400">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-red-400">
               Success Story?
             </span>
           </h2>
